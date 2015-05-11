@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RJ Festival v0.1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+    <link href="css/jquery.countdown.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="img/favicon.png">
+  
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/jquery.countdown.js"></script>
+
+    
+
+</head>
+
+<body>
+   
+
+ 
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-2 column">
+			<img alt="140x140" src="img/festivalwood_logo.png" class="img-rounded" style="width: 140px; height: 140px;">
+		</div>
+		<div class="col-md-10 column rjnavigation">
+			<div id="rjnavbar">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> 
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="home.html">Home</a>
+						</li>
+						<li>
+							<a href="home.html#buytickets">BUY Tickets</a>
+						</li>
+                        <li class="active">
+							<a href="lineup.html">Line-Up</a>
+						</li>
+                        <li>
+							<a href="eventinfo.html">Event Info</a>
+						</li>
+                        <li>
+							<a href="greenisbetter.html">Green is Better</a>
+						</li>
+                        <li>
+							<a href="login_members.html">Login/Members</a>
+						</li>
+                        <li>
+							<a href="aboutus.html">About Us</a>
+						</li>
+                        
+					</ul>
+				</div>
+				
+			</nav>
+                </div>
+            <div id="socialmedia">
+                
+                <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/rjfestival2015" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="btn btn-social-icon btn-sm btn-facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="btn btn-social-icon btn-sm btn-instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a class="btn btn-social-icon btn-sm btn-pinterest">
+                    <i class="fa fa-youtube"></i>
+                </a>
+            </div>
+		</div>
+		
+	</div>
+    <div id="wrapper">
+        <div class="row content-standard" id="divprops" style="padding-top: 30px;">
+			<div class="page-header" style="margin-left:15px; margin-right:15px;">
+				<h1>
+					Line-Up <small>& Timetables</small>
+				</h1>
+			</div>
+            <div style="margin-left:15px; margin-right:15px;">
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                <a class="btn btn-primary btn-success" role="button" href="#dl_dayOne" data-toggle="modal"><b>Day One</b></a>
+                <a class="btn btn-primary btn-success" role="button" href="#dl_dayTwo" data-toggle="modal"><b>Day Two</b></a>
+                <a class="btn btn-primary btn-success" role="button" href="#dl_dayThree" data-toggle="modal"><b>Day Three</b></a>
+            </div>
+            </div>
+            <div id="artists">
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_afrojack" class="thumbnail" data-toggle="modal"><img src="img/artists/afrojack.jpg"><span class="text-content"><span>Afrojack</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_dimitrivegas" class="thumbnail" data-toggle="modal"><img src="img/artists/dimitrivegas.jpg"><span class="text-content"><span>Dimitri Vegas & Like Mike</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_davidguetta" class="thumbnail" data-toggle="modal"><img src="img/artists/davidguetta.png"><span class="text-content"><span>David Guetta</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_hardwell" class="thumbnail" data-toggle="modal"><img src="img/artists/hardwell.jpg"><span class="text-content"><span>Hardwell</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_dyro" class="thumbnail" data-toggle="modal"><img src="img/artists/dyro.jpg" ><span class="text-content"><span>Dyro</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_diplo" class="thumbnail" data-toggle="modal"><img src="img/artists/Diplo.jpg"><span class="text-content"><span>Diplo</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_nervo" class="thumbnail" data-toggle="modal"><img src="img/artists/Nervo.jpg"><span class="text-content"><span>Nervo</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_steveaoki" class="thumbnail" data-toggle="modal"><img src="img/artists/steveaoki.jpg"><span class="text-content"><span>Steve Aoki</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_tiesto" class="thumbnail" data-toggle="modal"><img src="img/artists/Tiesto.jpg" style="height: 150px;"><span class="text-content"><span>Tiësto</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_arminvanbuuren" class="thumbnail" data-toggle="modal"><img src="img/artists/arminvanbuuren.jpg"><span class="text-content"><span>Armin van Buuren</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_martingarrix" class="thumbnail" data-toggle="modal"><img src="img/artists/martingarrix.jpeg"><span class="text-content"><span>Martin Garrix</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_avicii" class="thumbnail" data-toggle="modal"><img src="img/artists/avicii.jpg"><span class="text-content"><span>Avicii</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_nickyromero" class="thumbnail" data-toggle="modal"><img src="img/artists/nickyromero.jpg"><span class="text-content"><span>Nicky Romero</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_skrillex" class="thumbnail" data-toggle="modal"><img src="img/artists/skrillex.jpg"><span class="text-content"><span>Skrillex</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_calvinharris" class="thumbnail" data-toggle="modal"><img src="img/artists/calvinharris.jpg"><span class="text-content"><span>Calvin Harris</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_alesso" class="thumbnail" data-toggle="modal"><img src="img/artists/alesso.jpg"><span class="text-content"><span>Alesso</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_showtek" class="thumbnail" data-toggle="modal"><img src="img/artists/showtek.jpg"><span class="text-content"><span>Showtek</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_dvbbs" class="thumbnail" data-toggle="modal"><img src="img/artists/dvbbs.jpg"><span class="text-content"><span>DVBBS</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_zedd" class="thumbnail" data-toggle="modal"><img src="img/artists/zedd.jpg"><span class="text-content"><span>Zedd</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_r3hab" class="thumbnail" data-toggle="modal"><img src="img/artists/R3hab.jpg"><span class="text-content"><span>R3hab</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_steveangello" class="thumbnail" data-toggle="modal"><img src="img/artists/steveangello.jpeg"><span class="text-content"><span>Steve Angello</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_axwellingrosso" class="thumbnail" data-toggle="modal"><img src="img/artists/axwell_ingrosso.jpg"><span class="text-content"><span>Axwell /\ Sebastian Ingrosso</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_oliverheldens" class="thumbnail" data-toggle="modal"><img src="img/artists/oliverheldens.jpeg"><span class="text-content"><span>Oliver Heldens</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_feddelegrand" class="thumbnail" data-toggle="modal"><img src="img/artists/feddelegrand.png"><span class="text-content"><span>Fedde Le Grand</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_vicetone" class="thumbnail" data-toggle="modal"><img src="img/artists/vicetone.jpg"><span class="text-content"><span>Vicetone</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_paulvandyk" class="thumbnail" data-toggle="modal"><img src="img/artists/paulvandyk.jpg"><span class="text-content"><span>Paul van Dyk</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_headhunterz" class="thumbnail" data-toggle="modal"><img src="img/artists/headhunterz.jpg"><span class="text-content"><span>Headhunterz</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_borgore" class="thumbnail" data-toggle="modal"><img src="img/artists/borgore.jpg"><span class="text-content"><span>Borgore</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_kura" class="thumbnail" data-toggle="modal"><img src="img/artists/kura.jpeg"><span class="text-content"><span>Kura</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_markusschulz" class="thumbnail" data-toggle="modal"><img src="img/artists/markusschulz.jpg"><span class="text-content"><span>Markus Schulz</span></span></a>
+            
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_laidbackluke" class="thumbnail" data-toggle="modal"><img src="img/artists/laidbackluke.jpeg"><span class="text-content"><span>Laidback Luke</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_sandervandoorn" class="thumbnail" data-toggle="modal"><img src="img/artists/sandervandoorn.jpg"><span class="text-content"><span>Sander van Doorn</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_firebeatz" class="thumbnail" data-toggle="modal"><img src="img/artists/firebeatz.jpg"><span class="text-content"><span>Firebeatz</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_porterrobinson" class="thumbnail" data-toggle="modal"><img src="img/artists/porterrobinson.jpg"><span class="text-content"><span>Porter Robinson</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_vinai" class="thumbnail" data-toggle="modal"><img src="img/artists/vinai.jpg"><span class="text-content"><span>VINAI</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_noisecontrollers" class="thumbnail" data-toggle="modal"><img src="img/artists/noisecontrollers.jpg"><span class="text-content"><span>Noisecontrollers</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_carnage" class="thumbnail" data-toggle="modal"><img src="img/artists/carnage.jpg"><span class="text-content"><span>DJ Carnage</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_dondiablo" class="thumbnail" data-toggle="modal"><img src="img/artists/dondiablo.jpg"><span class="text-content"><span>Don Diablo</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_quintino" class="thumbnail" data-toggle="modal"><img src="img/artists/quintino.jpg"><span class="text-content"><span>Quintino</span></span></a>
+            </div>
+            <div class="col-l-6 col-md-2">
+                <a href="#dl_yellowclaw" class="thumbnail" data-toggle="modal"><img src="img/artists/yellowclaw.jpg"><span class="text-content"><span>Yellow Claw</span></span></a>
+            </div>
+            </div>
+        </div>
+    </div>
+	<div class="row clearfix" id="divprops">
+		<div class="col-md-4 column">
+			 <address> <strong>DARS International, ltd.</strong><br> Rachelsmolen 1<br> 5612 MA Eindhoven<br> <abbr title="Phone">P:</abbr> (06) 8191-3644</address>
+		</div>
+		<div class="col-md-4 column" id="footer_socialmedia">
+			<div>
+                <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/rjfestival2015" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="btn btn-social-icon btn-sm btn-facebook">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="btn btn-social-icon btn-sm btn-instagram">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a class="btn btn-social-icon btn-sm btn-pinterest">
+                    <i class="fa fa-youtube"></i>
+                </a>
+            </div>
+		</div>
+		<div class="col-md-4 column" id="footer_copyright">
+			
+				<p>
+					.
+				</p> <small>Copyright 2015 <cite>RJ Johnson</cite></small>
+			
+		</div>
+	</div>
+
+
+</div>
+<!--BEGIN MODAL DIALOGS-->
+    <!--TIMETABLE DIALOGS-->
+    <div class="modal fade" id="dl_dayOne" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Timetable - <b>Day One</b></h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Tree Stage (1)</th>
+                                <th>Root Stage (2)</th>
+                                <th>Branch Stage (3)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>12:00 - 13:30</b></td>
+                                <td>Diplo</td>
+                                <td>Kura</td>
+                                <td>Firebeatz</td>
+                            </tr>
+                            <tr>
+                                <td><b>13:30 - 15:00</b></td>
+                                <td>Steve Angello</td>
+                                <td>Sander van Doorn</td>
+                                <td>Noisecontrollers</td>
+                            </tr>
+                            <tr>
+                                <td><b>15:00 - 17:00</b></td>
+                                <td>Nervo</td>
+                                <td>Zedd</td>
+                                <td>Skrillex</td>
+                            </tr>
+                            <tr>
+                                <td><b>17:00 - 19:00</b></td>
+                                <td>Steve Aoki</td>
+                                <td>Oliver Heldens</td>
+                                <td>Laidback Luke</td>
+                            </tr>
+                            <tr>
+                                <td><b>19:00 - 21:00</b></td>
+                                <td>Vicetone</td>
+                                <td>VINAI</td>
+                                <td>Afrojack</td>
+                            </tr>
+                            <tr>
+                                <td><b>21:00 - 23:30</b></td>
+                                <td>Hardwell</td>
+                                <td>Dimitri Vegas & Like Mike</td>
+                                <td>Armin van Buuren</td>
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default btn-danger" href="img/Timetable.jpg" download>Download Full Timetable</a>
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_dayTwo" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Timetable - <b>Day Two</b></h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Tree Stage (1)</th>
+                                <th>Root Stage (2)</th>
+                                <th>Branch Stage (3)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>12:00 - 13:30</b></td>
+                                <td>Dyro</td>
+                                <td>Laidback Luke</td>
+                                <td>DVBBS</td>
+                            </tr>
+                            <tr>
+                                <td><b>13:30 - 15:00</b></td>
+                                <td>Borgore</td>
+                                <td>Paul van Dyk</td>
+                                <td>Markus Schulz</td>
+                            </tr>
+                            <tr>
+                                <td><b>15:00 - 17:00</b></td>
+                                <td>Headhunterz</td>
+                                <td>Nicky Romero</td>
+                                <td>Oliver Heldens</td>
+                            </tr>
+                            <tr>
+                                <td><b>17:00 - 19:00</b></td>
+                                <td>Porter Robinson</td>
+                                <td>Calvin Harris</td>
+                                <td>R3hab</td>
+                            </tr>
+                            <tr>
+                                <td><b>19:00 - 21:00</b></td>
+                                <td>Alesso</td>
+                                <td>Showtek</td>
+                                <td>David Guetta</td>
+                            </tr>
+                            <tr>
+                                <td><b>21:00 - 23:30</b></td>
+                                <td>Martin Garrix</td>
+                                <td>Tiësto</td>
+                                <td>Avicii</td>
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default btn-danger" href="img/Timetable.jpg" download>Download Full Timetable</a>
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_dayThree" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Timetable - <b>Day Three</b></h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Tree Stage (1)</th>
+                                <th>Root Stage (2)</th>
+                                <th>Branch Stage (3)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>12:00 - 13:30</b></td>
+                                <td>Markus Schulz</td>
+                                <td>Noisecontrollers</td>
+                                <td>Headhunterz</td>
+                            </tr>
+                            <tr>
+                                <td><b>13:30 - 15:00</b></td>
+                                <td>Oliver Heldens</td>
+                                <td>R3hab</td>
+                                <td>Zedd</td>
+                            </tr>
+                            <tr>
+                                <td><b>15:00 - 17:00</b></td>
+                                <td>Showtek</td>
+                                <td>Sander van Doorn</td>
+                                <td>Hardwell</td>
+                            </tr>
+                            <tr>
+                                <td><b>17:00 - 19:00</b></td>
+                                <td>Axwell /\ Ingrosso</td>
+                                <td>Martin Garrix</td>
+                                <td>Afrojack</td>
+                            </tr>
+                            <tr>
+                                <td><b>19:00 - 21:00</b></td>
+                                <td>Yellow Claw</td>
+                                <td>Avicii</td>
+                                <td>Nervo</td>
+                            </tr>
+                            <tr>
+                                <td><b>21:00 - 23:30</b></td>
+                                <td>Calvin Harris</td>
+                                <td>Steve Aoki</td>
+                                <td>RJ Johnson</td>
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default btn-danger" href="img/Timetable.jpg" download>Download Full Timetable</a>
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div> <!--END OF TIMETABLE DIALOGS-->
+    <div class="modal fade" id="dl_afrojack" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>DJ Biography - <b>Afrojack</b>
+                    <div style="float:right;">
+                        <a class="btn btn-social-icon btn-sm btn-reddit" href="http://afrojack.com" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>                       
+                        <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/djafrojack" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-facebook" href="https://www.facebook.com/djafrojack">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-instagram" href="https://instagram.com/afrojack">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-pinterest" href="https://www.youtube.com/user/AFROJACKTV" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                       
+                    </div>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Nick van de Wall</b> (born 9 September 1987), commonly known by his stage name <b>Afrojack</b>, is a Dutch music producer and DJ. In 2014 he released his debut album Forget the World. <br><br>Afrojack regularly features in top 10 of DJ Mag Top 100 DJ's. His 2010 entry into the poll at number 19 was the highest new entry of that year's list. January 2012 Afrojack received a European Border Breakers Award. Afrojack's newest single The Spark featuring Spree Wilson has so far hit number 3 in Australia and New Zealand, and top 10 in over 7 more countries. <br><br>Afrojack runs his own label, Wall Recordings, which represents Dutch DJs including R3hab, Sidney Samson and Mayaadh. Afrojack co-produced music with many artists including David Guetta, Mike Brown and Madonna.</p>
+                    <iframe width="533" height="300" src="https://www.youtube.com/embed/bltr_Dsk5EY?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_hardwell" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>DJ Biography - <b>Hardwell</b>
+                    <div style="float:right;">
+                        <a class="btn btn-social-icon btn-sm btn-reddit" href="http://www.djhardwell.com" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/hardwell" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-facebook" href="https://www.facebook.com/djhardwell">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-instagram" href="https://instagram.com/hardwell">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-pinterest" href="https://www.youtube.com/user/robberthardwell" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                    </div>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Robbert van de Corput</b> (born 7 January 1988 in Breda, Netherlands), better known by his stage name <b>Hardwell</b>, is a Dutch big room house and electro house DJ and music producer. He was voted the <b>World's No. 1 DJ</b> on DJ Magazine's annual Top 100 DJs poll in 2013, and again in 2014. Hardwell is widely known for his live sets at major music festivals such as Tomorrowland and Ultra. The video streams of his performances on his personal YouTube channel have collectively garnered more than 100 million views.</p>
+                    <iframe width="533" height="300" src="https://www.youtube.com/embed/EoYOCxP6yIA?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_dimitrivegas" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>DJ Biography - <b>Dimitri Vegas & Like Mike</b>
+                    <div style="float:right;">
+                        <a class="btn btn-social-icon btn-sm btn-reddit" href="http://www.dimitrivegasandlikemike.com" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>                       
+                        <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/dimitrivega" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-facebook" href="https://www.facebook.com/dimitrivegasandlikemike">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-instagram" href="https://instagram.com/dimitrivegasandlikemike">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-pinterest" href="https://www.youtube.com/user/dimitrivegasonline" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                       
+                    </div>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Dimitri Vegas & Like Mike</b> are a Greek/Belgian electronic DJ duo, living in Belgium, composed of brothers <b>Dimitri Thivaios</b> and <b>Michael Thivaios</b>. They currently hold the 2nd spot on DJ Magazine's annual Top 100 DJs poll. </p>
+                    <br><iframe width="533" height="300" src="https://www.youtube.com/embed/_o-XIryB2gg?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_arminvanbuuren" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>DJ Biography - <b>Armin van Buuren</b>
+                    <div style="float:right;">
+                        <a class="btn btn-social-icon btn-sm btn-reddit" href="http://www.arminvanbuuren.com" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>                       
+                        <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/arminvanbuuren" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-facebook" href="https://www.facebook.com/arminvanbuuren">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-instagram" href="https://instagram.com/arminvanbuurenofficial">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-pinterest" href="https://www.youtube.com/user/arminvanbuuren" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                       
+                    </div>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Armin van Buuren</b> born 25 December 1976 is a Dutch trance music producer, DJ and radio personality. Since 2001, Van Buuren has hosted a weekly radio show called A State of Trance, which has 20 million weekly listeners in 26 countries (excluding online listeners).This radio show propelled him to superstardom and garnered an intense following of trance fans around the world. <br><br>Van Buuren has won a number of accolades. He has been ranked the <b>World No. 1 DJ</b> by DJ Magazine in their annual Top 100 DJs fan poll a record of five times, <b>4 years in a row</b>. He is currently ranked World No. 3 on DJ Magazine's list for 2014. <br><br>In 2014, he was nominated for a Grammy Award for Best Dance Recording for his single "This Is What It Feels Like", which makes him the fourth trance artist ever to receive a Grammy nomination. In the United States, he holds the record for most entries (21) on the Billboard Dance/Electronic Albums chart. His 2008 studio album, Imagine, entered the Dutch album chart at No. 1, a first for a dance music artist in Dutch music history.</p>
+                    <iframe width="533" height="300" src="https://www.youtube.com/embed/BR_DFMUzX4E?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_alesso" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>DJ Biography - <b>Alesso</b>
+                    <div style="float:right;">
+                        <a class="btn btn-social-icon btn-sm btn-reddit" href="http://www.alessoworld.com" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>                       
+                        <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/alesso" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-facebook" href="https://www.facebook.com/AlessoOfficial">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-instagram" href="https://instagram.com/alesso">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-pinterest" href="https://www.youtube.com/user/AlessoOfficial" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                       
+                    </div>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Alessandro Lindblad</b> (born July 7, 1991), commonly known by his stage name <b>Alesso</b>, is a Swedish DJ and electronic dance music producer. He has worked with numerous EDM (and other) artists, including Avicii, OneRepublic, Calvin Harris, Usher, David Guetta, and Sebastian Ingrosso. <br><br>He has also performed at numerous music festivals, including Coachella, Electric Daisy Carnival, and Tomorrowland. In 2012, MTV named Alesso one of the <b>"EDM Rookies to Watch,"</b> and Madonna, who invited him to open select dates on her MDNA Tour, called Alesso "the next big thing in dance music." As of 2014, he ranks <b></b>15th on DJ Magazine's list</b> of the top 100 DJs. His debut full-length album FOREVER is set to be released by May 22, 2015 by Def Jam Recordings.</p>
+                    <iframe width="533" height="300" src="https://www.youtube.com/embed/a7SouU3ECpU?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_martingarrix" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>DJ Biography - <b>Martin Garrix</b>
+                    <div style="float:right;">
+                        <a class="btn btn-social-icon btn-sm btn-reddit" href="http://www.martingarrix.com" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>                       
+                        <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/martingarrix" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-facebook" href="https://www.facebook.com/martin.garrix">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-instagram" href="https://instagram.com/martingarrix/">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-pinterest" href="https://www.youtube.com/user/MartinGarrix" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                       
+                    </div>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Martijn Garritsen</b> (born 14 May 1996), commonly known by his stage name <b>Martin Garrix</b>, is a Dutch DJ and producer who is signed to Spinnin' Records. He is best known for the track "Animals", which was a Top 10 hit in more than 10 countries; the song has also peaked at number 1 in Belgium and the United Kingdom, and number 3 in Ireland. <br><br>His single "Wizard", produced with Jay Hardway, was also successful in numerous countries in 2014. Debuting at number 40 of DJ Magazine's Top 100 DJs, he is currently ranked number 4.</p>
+                    <iframe width="533" height="300" src="https://www.youtube.com/embed/gCYcHz2k5x0?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_tiesto" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>DJ Biography - <b>Tiësto</b>
+                    <div style="float:right;">
+                        <a class="btn btn-social-icon btn-sm btn-reddit" href="http://www.tiesto.com" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>                       
+                        <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/tiesto" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-facebook" href="https://www.facebook.com/tiesto">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-instagram" href="https://instagram.com/tiesto">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-pinterest" href="https://www.youtube.com/user/officialtiesto" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                       
+                    </div>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Tijs Michiel Verwest</b> (born 17 January 1969), better known by his stage name Tiësto is a Dutch DJ and record producer. Formerly known as <b>DJ Tiësto</b>, he is now known simply as "Tiësto", an artist name which is a twist of his childhood nickname. <br><br>His 2000 remix of Delerium's "Silence" featuring Sarah McLachlan exposed him to more mainstream audiences. In 2001, he released his first solo album, In My Memory. The title track is a remix of an original song written by and featuring Nicola Hitchcock. This album gave him several major hits that launched his career. He was voted World No 1 DJ by DJ Magazine in its annual Top 100 DJs readership poll consecutively for three years from 2002 to 2004. <br><br>Just after releasing his second studio album Just Be he performed live at the 2004 Summer Olympics opening ceremony in Athens, the first DJ to play <b>live on stage at an Olympics</b>. He won the Grammy Award for Best Remixed Recording, Non-Classical for his remixed version of John Legend's Top 40 Hit All Of Me at the 57th Annual Grammy Awards.</p>
+                    <iframe width="533" height="300" src="https://www.youtube.com/embed/CFF0mV24WCY?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_avicii" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>DJ Biography - <b>Avicii</b>
+                    <div style="float:right;">
+                        <a class="btn btn-social-icon btn-sm btn-reddit" href="http://www.avicii.com" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>                       
+                        <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/Avicii" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-facebook" href="https://www.facebook.com/avicii">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-instagram" href="https://instagram.com/avicii">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-pinterest" href="https://www.youtube.com/user/AviciiOfficialVEVO" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                       
+                    </div>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Tim Bergling</b> (born 8 September 1989), better known by his stage name <b>Avicii (stylized as ɅVICII)</b> is a Swedish EDM DJ, remixer, and a country and electro house record producer. <br><br>Avicii ranked <b>3rd on DJ Magazine 's annual Top 100 DJs</b> in 2012 and 2013 and has been nominated twice for a Grammy Award, once for his work on "Sunshine" with David Guetta in 2012 and once for his song "Levels" in 2013. Some of his most famous songs are "I Could Be the One" with Nicky Romero, "Wake Me Up", "You Make Me", "X You", "Hey Brother", "Addicted to You" and "Seek Bromance".</p>
+                    <iframe width="533" height="300" src="https://www.youtube.com/embed/IcrbM1l_BoI?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_davidguetta" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>DJ Biography - <b>David Guetta</b>
+                    <div style="float:right;">
+                        <a class="btn btn-social-icon btn-sm btn-reddit" href="http://www.davidguetta.com" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>                       
+                        <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/davidguetta" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-facebook" href="https://www.facebook.com/DavidGuetta">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-instagram" href="https://instagram.com/davidguetta">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-pinterest" href="https://www.youtube.com/user/davidguettavevo" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                       
+                    </div>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Pierre David Guetta</b> (born 7 November 1967) is a French disc jockey and record producer. Guetta achieved mainstream success with his 2009 album One Love which included the hit singles "When Love Takes Over", "Gettin' Over You", and "Sexy Bitch", all three of which <b>reached #1 in the United Kingdom</b>, and "Memories". The 2011 follow-up album, Nothing but the Beat, continued this success, containing the hit singles "Where Them Girls At", "Little Bad Girl", "Without You", "Titanium" and "Turn Me On". <br><br>Guetta has sold over <b>nine million albums and 30 million singles worldwide</b>. In 2011 Guetta was voted as the #1 DJ in the 'DJ Mag Top 100 DJs' fan poll. In 2013, Billboard crowned "When Love Takes Over" as the number one dance-pop collaboration of all time.</p>
+                    <iframe width="533" height="300" src="https://www.youtube.com/embed/JRfuAukYTKg?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_nickyromero" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>DJ Biography - <b>Nicky Romero</b>
+                    <div style="float:right;">
+                        <a class="btn btn-social-icon btn-sm btn-reddit" href="http://www.nickyromero.com" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>                       
+                        <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/nickyromero" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-facebook" href="https://www.facebook.com/djnickyromero">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-instagram" href="https://instagram.com/nickyromero">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-pinterest" href="https://www.youtube.com/user/nickyromerotv" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                       
+                    </div>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Nick Rotteveel</b> (born 6 January 1989), better known by his stage name Nicky Romero, is a Dutch DJ and music producer. He has worked with, and received support from DJs, such as Tiësto, Fedde le Grand, Sander van Doorn, David Guetta, Calvin Harris, Armand Van Helden, Avicii and Hardwell.<br><br> He currently ranks <b>No. 8</b> on DJ Magazine's annual Top 100 DJs poll. He is known for his viral hit song "Toulouse", as well as for having a number one hit single in the UK with "I Could Be the One" with Avicii.</p>
+                    <iframe width="533" height="300" src="https://www.youtube.com/embed/KrVC5dm5fFc?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_skrillex" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>DJ Biography - <b>Skrillex</b>
+                    <div style="float:right;">
+                        <a class="btn btn-social-icon btn-sm btn-reddit" href="http://www.skrillex.com" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>                       
+                        <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/skrillex" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-facebook" href="https://www.facebook.com/skrillex">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-instagram" href="https://instagram.com/skrillex">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-pinterest" href="https://www.youtube.com/user/TheOfficialSkrillex" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                       
+                    </div>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Sonny Moore</b> (born January 15, 1988), better known by his stage name Skrillex, is an American electronic dance music producer, DJ, singer and songwriter. On November 30, 2011, he was nominated for a total of <b>five Grammy Awards at the 54th Grammy Awards</b>, including Best New Artist and won three: "Best Dance/Electronica Album", "Best Dance Recording", and "Best Remixed Recording, Non-Classical". On December 5, 2011, the BBC announced that he had been nominated for their Sound of 2012 poll. On December 12, 2011, he was also named MTV's Electronic Dance Music Artist of the Year.<br><br>Skrillex has won a total of <b>six Grammy Awards</b>. Skrillex has collaborated with Diplo to form the group Jack Ü.</p>
+                    <iframe width="533" height="300" src="https://www.youtube.com/embed/YJVmu6yttiw?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_steveaoki" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>DJ Biography - <b>Steve Aoki</b>
+                    <div style="float:right;">
+                        <a class="btn btn-social-icon btn-sm btn-reddit" href="http://www.steveaoki.com" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>                       
+                        <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/steveaoki" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-facebook" href="https://www.facebook.com/Steve.Aoki">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-instagram" href="https://instagram.com/steveaoki">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-pinterest" href="https://www.youtube.com/user/steveaoki" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                       
+                    </div>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Steven Hiroyuki "Steve" Aoki</b> (born November 30, 1977) is an American electro house musician, record producer, and music executive. Known for energetic live shows, in 2012 Pollstar designated Aoki as the highest grossing dance artist in North America from tours. <br><br>He has collaborated with producers and vocalists such as will.i.am, Afrojack, LMFAO, Iggy Azalea, Lil Jon, and Laidback Luke, and is known for his remixes of artists such as Kid Cudi. Aoki has released several <b>Billboard-charting studio albums</b> as well, notably Wonderland, which was nominated for Grammy Award for Best Dance/Electronica Album in 2013. <br><br>He is currently releasing his two-part album series Neon Future. The first part was released on September 30, 2014. He is the founder of the <b>Steve Aoki Charitable Fund</b>, which raises money for global humanitarian relief organizations.</p>
+                    <iframe width="533" height="300" src="https://www.youtube.com/embed/gl2p4G3CUrI?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="dl_calvinharris" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>DJ Biography - <b>Calvin Harris</b>
+                    <div style="float:right;">
+                        <a class="btn btn-social-icon btn-sm btn-reddit" href="http://www.calvinharris.co.uk/gb/home" target="_blank">
+                            <i class="fa fa-home"></i>
+                        </a>                       
+                        <a class="btn btn-social-icon btn-sm btn-twitter" href="https://twitter.com/CalvinHarris" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-facebook" href="https://www.facebook.com/calvinharris">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-instagram" href="https://instagram.com/calvinharris">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a class="btn btn-social-icon btn-sm btn-pinterest" href="https://www.youtube.com/user/CalvinHarrisVEVO" target="_blank">
+                            <i class="fa fa-youtube"></i>
+                        </a>
+                       
+                    </div>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p><b>Adam Richard Wiles</b> (born 17 January 1984), better known by his stage name <b>Calvin Harris</b>, is a Scottish singer, songwriter, record producer and DJ. <br><br>His <b>gold-selling debut album</b>, I Created Disco, was released in 2007 and contained the top-ten singles "Acceptable in the 80s" and "The Girls". His second studio album, Ready for the Weekend (2009), reached number one on the UK Albums Chart and includes "I'm Not Alone", which debuted at number one on the UK Singles Chart, the top-five hit "Ready for the Weekend", and the singles "Flashback" and "You Used to Hold Me". In October 2012, Harris released his third studio album, 18 Months, which contained the singles, "Bounce", "Feel So Close", "Let's Go", "We'll Be Coming Back", "Sweet Nothing", "Drinking from the Bottle", "I Need Your Love", and "Thinking About You". All of these singles reached the <b>UK top 10</b>. <br><br>Harris has also written and produced tracks for other recording artists, including Kylie Minogue, Sophie Ellis-Bextor, Dizzee Rascal, Cheryl Cole, Rita Ora, Example, and <b></b>Rihanna's internationally successful single, "We Found Love"</b>, which gave him his first US number-one single on the Billboard Hot 100. Harris released his fourth studio album, Motion, on 3 November 2014. <br><br>Harris holds the record for the <b>most top ten hits</b> from one studio album on the UK Singles Chart with nine hits, surpassing Michael Jackson. In October 2014, he became the first artist to place three songs simultaneously on Billboard's Dance/Electronic Songs chart. According to Forbes, Harris was the <b>highest-paid DJ</b> of 2013 and 2014.</p>
+                    <iframe width="533" height="300" src="https://www.youtube.com/embed/ebXbLfLACGM?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="scroll-top-wrapper ">
+	<span class="scroll-top-inner">
+		<i class="fa fa-2x fa-arrow-circle-o-up"></i>
+	</span>
+</div>     
+</body>
+    
+</html>

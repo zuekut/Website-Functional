@@ -1,0 +1,154 @@
+/* Customized styles by Remco
+
+*/
+
+body{
+    background: black;
+    
+}
+@media (min-width: 1200px){
+    
+    /*navigation */
+    .navbar{
+        background: none;
+        
+    }
+    .navbar-default .navbar-nav > li > a {
+        color: white;
+        font-weight: bold;
+    }
+    
+    .navbar-default .navbar-nav > li > a:hover,
+    .navbar-default .navbar-nav > li > a:focus {
+        color: limegreen;
+        background-color: transparent;
+    }
+    
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+        color: #555555;
+        background-color: #e7e7e7;
+    }
+    
+   
+    
+    .rjnavigation{
+        top: 40px;
+        background: url(/img/black-50-trans.png);
+        border-radius: 6px;
+        padding-top: 10px;
+        
+    }
+     #rjnavbar{
+        width: 770px;
+    }
+    
+    #text_daysleft{
+        text-align: center;
+        color: white;
+        font-size: 1.5em;
+    }
+    #note{
+        color: #666666;
+        font-size: 12px;
+        margin: 0 auto;
+        padding: 4px;
+        text-align: center;
+        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+        width: 400px;
+    }
+    
+    #btn_buynow{
+        position: relative;
+        left: 300px;
+    
+        font-size: 2.0em;
+    }
+    
+    #btn_next{
+        width: 100%;
+        font-size: 1.5em;
+    }
+    
+    
+    span.text-content span {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    #youtubevid{
+        margin: 0 auto;
+        height: 378px;
+        width: 672px;
+        margin-bottom: 10px;
+    
+    }
+    
+    #btn_skip{
+        position: relative;
+        left: 450px;
+        margin-top: 50px;
+        
+    }
+    
+    #text_festivaltitle{
+        text-align: center;
+        font-size: 3em;
+    }
+    .progress{
+        
+    }
+    
+    .form-days{
+        width: 20%; 
+        float: left;
+    }
+    
+    .form-amount{
+        width: 79%;
+        float: right;
+        
+    }
+    
+    .form-clear{
+        clear: both;
+    }
+    
+
+    
+    #divprops{
+        background: url(/img/black-50-trans.png);
+        border-radius: 6px;
+        margin-bottom: 5px;
+        padding: 5px;
+        color: white;
+    
+    }
+    
+    #socialmedia{
+        position: absolute;
+        top: 20px;
+        left: 800px;
+       
+    }
+    
+  
+    
+    .btn-social-icon{
+        margin-left: 5px;
+    }
+   
+    
+    #footer_socialmedia{
+        
+        margin-top: 40px;
+        text-align: center;
+    }
+    
+    #footer_copyright{
+        margin-top: 40px;
+        text-align: right;
+    }
+}
