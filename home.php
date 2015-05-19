@@ -59,25 +59,25 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li class="active">
-							<a href="home.html">Home</a>
+							<a href="home.php">Home</a>
 						</li>
 						<li>
 							<a href="#buytickets">BUY Tickets</a>
 						</li>
                         <li>
-							<a href="lineup.html">Line-Up</a>
+							<a href="lineup.php">Line-Up</a>
 						</li>
                         <li>
-							<a href="eventinfo.html">Event Info</a>
+							<a href="eventinfo.php">Event Info</a>
 						</li>
                         <li>
-							<a href="greenisbetter.html">Green is Better</a>
+							<a href="greenisbetter.php">Green is Better</a>
 						</li>
                         <li>
-							<a href="login_members.html">Login/Members</a>
+							<a href="login_members.php">Login/Members</a>
 						</li>
                         <li>
-							<a href="aboutus.html">About Us</a>
+							<a href="aboutus.php">About Us</a>
 						</li>
                         
 					</ul>
@@ -140,7 +140,7 @@
 		<div class="col-md-2 column">
 			<img alt="140x140" src="img/artists/steveaoki.jpg" class="img-thumbnail"><span class="text-content"><span>Steve Aoki</span></span>
 		</div>
-        <a href="lineup.html" class="btn btn-default" id="btn_moreartists"><span class="glyphicon glyphicon-music"></span> And many more!...</a>
+        <a href="lineup.php" class="btn btn-default" id="btn_moreartists"><span class="glyphicon glyphicon-music"></span> And many more!...</a>
 	</div>
 	<div class="row clearfix" id="divprops">
 		<div class="col-md-12 column" >
