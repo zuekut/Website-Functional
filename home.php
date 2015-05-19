@@ -10,7 +10,7 @@ $form_day = $form_amount = $form_camping = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    if (empty($_POST['form_amount'])) {
+    if (empty($_POST['form_amount2'])) {
         $form_amountErr = '<div id="alert-notickets" class="alert alert-dismissable alert-danger">
 				<h4>
 					Processing Error!
@@ -24,6 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<h1>PHP Test complete</h1>";
     }
     }
+    if (empty($_POST['form_amount'])) {
+        $form_amountErr = '<div id="alert-notickets" class="alert alert-dismissable alert-danger"><h4>Processing Error!</h4> <br><strong>Warning!</strong> There was an error processing your order. Please try again! <br><br><small><strong><i>Error 101</i></strong>: You have not selected any tickets. See <a href="#ticket_faq" class="alert-link" data-toggle="modal">FAQ</a>. If error persists please contact the server administrator</small></div>';
+    } else {
+        echo "<h1>PHP Test complete</h1>";
+    }
+
+    
     
     
 }
@@ -271,8 +278,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                                     <div class="form-clear"></div>
                                 <div class="form-group" style="width: 70%;">
-                                    <label for="form_amount">Amount of tickets (max 6):</label>
-                                    <select class="form-control" id="amount_tickets" name="form_amount">
+                                    <label for="form_amount2">Amount of tickets (max 6):</label>
+                                    <select class="form-control" id="amount_tickets" name="form_amount2">
                                         <option></option>
                                         <option>1</option>
                                         <option>2</option>
@@ -320,8 +327,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                                     <div style="height: 70px;"></div>
                                 <div class="form-group" style="">
-                                    <label class="" for="form_amount">Amount of tickets (max 6):</label>
-                                    <select class="form-control" name="form_amount" id="amount_tickets">
+                                    <label class="" for="form_amount2">Amount of tickets (max 6):</label>
+                                    <select class="form-control" name="form_amount2" id="amount_tickets">
                                         <option></option>
                                         <option>1</option>
                                         <option>2</option>
