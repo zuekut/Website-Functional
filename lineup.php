@@ -501,7 +501,7 @@
                     </div>
                     </h4>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="test_modal">
                     <p><b>Nick van de Wall</b> (born 9 September 1987), commonly known by his stage name <b>Afrojack</b>, is a Dutch music producer and DJ. In 2014 he released his debut album Forget the World. <br><br>Afrojack regularly features in top 10 of DJ Mag Top 100 DJ's. His 2010 entry into the poll at number 19 was the highest new entry of that year's list. January 2012 Afrojack received a European Border Breakers Award. Afrojack's newest single The Spark featuring Spree Wilson has so far hit number 3 in Australia and New Zealand, and top 10 in over 7 more countries. <br><br>Afrojack runs his own label, Wall Recordings, which represents Dutch DJs including R3hab, Sidney Samson and Mayaadh. Afrojack co-produced music with many artists including David Guetta, Mike Brown and Madonna.</p>
                     <iframe width="533" height="300" src="https://www.youtube.com/embed/bltr_Dsk5EY?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
                 </div>

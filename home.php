@@ -1,5 +1,28 @@
 <?php include("conn.php");?>
 
+
+<?php
+//PHP for checking whether user has selected tickets correctly.
+
+//define variables
+$form_dayErr = $form_amountErr = $form_campingErr = "";
+$form_day = $form_amount = $form_camping = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    if (empty($_POST['form_amount'])) {
+        $form_amountErr = '<div id="alert-notickets" class="alert alert-dismissable alert-danger"><button type="button" class="close" aria-hidden="false">×</button>
+				<h4>
+					Processing Error!
+				</h4> <strong>Warning!</strong> There was an error processing your order. Reason: You have not selected any tickets. <a href="#" class="alert-link">FAQ</a>
+                </div>';
+    } else {
+        echo "<h1>Successfull Test!</h1>";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,7 +133,7 @@
 		<div class="col-md-12 column">
 			<div class="jumbotron">
                 
-                <p id="text_daysleft">Days left until RJ Festival</p>
+                <p id="text_daysleft">Days left until <strong>Wood Festival</strong></p>
                 <div id="countdown"></div>
                 <p style="font-size: 20px; text-align:center;">24 - 26 July 2015</p>
 				<p>
@@ -170,12 +193,7 @@
 			<p>
 				Text about choosing ticket and how to do it. Refer to FAQ etc. Put any relevant information here. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
 			</p>
-			<div id="alert-notickets" class="alert alert-dismissable alert-danger hide">
-				 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-				<h4>
-					Alert!
-				</h4> <strong>Warning!</strong> You have not selected any tickets. <a href="#" class="alert-link">FAQ</a>
-			</div>
+			<span class="error"><?php echo $form_amountErr; ?></span>
 			<div class="row">
 				<div class="col-md-4">
 					<div class="thumbnail">
@@ -189,21 +207,19 @@
 							</p>
                             
                             <div class="home_ticketform">
-                                <form role="form" name="alert-amount" action="" method="post" class="form-amount" style="width:100%;">
+                                <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form-amount" style="width:100%;">
                                 <div class="form-group">
-                                    <label for="sel1">Choose your Day:</label>
-                                    <select class="form-control" id="amount_tickets">
+                                    <label for="form_day">Choose your Day:</label>
+                                    <select class="form-control" name="form_day">
                                         <option>Friday</option>
                                         <option>Saturday</option>
                                         <option>Sunday</option>
                                     </select>
                                 </div>
-                            </form>
-                                <form role="form" name="alert-amount" action="" method="post" class="form-amount" style="width:100%;">
                                 <div class="form-group">
-                                    <label for="sel1">Amount of tickets (max 10):</label>
-                                    <select class="form-control" id="amount_tickets">
-                                        <option>0</option>
+                                    <label for="form_amount">Amount of tickets (max 10):</label>
+                                    <select class="form-control" id="amount_tickets" name="form_amount">
+                                        <option></option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -216,6 +232,7 @@
                                         <option>10</option>
                                     </select>
                                 </div>
+                                    <button id="submit" name="submit" type="submit" value="Send" class="btn btn-block btn-sm btn-success">Checkout <span class="glyphicon glyphicon-shopping-cart"></span></button>
                             </form>
                                 <div class="form-clear"></div>
                                 </div>
@@ -239,25 +256,19 @@
 								The two-day experience will allow you to visit the festival on 2 consecutive days (Friday/Saturday or Saturday/Sunday). You can also purchase an area at the camping for up to 6 people. <br><a href=""><b>More Info</b></a>
 							</p>
                             <div class="home_ticketform">
-                                <form role="form" name="alert-amount" action="" method="post" class="form-amount" style="width:100%;">
-                                <div class="form-group">
-                                    <label for="sel1">Choose your Days:</label>
-                                    <select class="form-control" id="amount_tickets">
+                                <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form-inline">
+                                <div class="form-group" style="width: 100%;">
+                                    <label for="form_day">Choose your Days:</label>
+                                    <select class="form-control" name="form_day">
                                         <option>Friday/Saturday</option>
                                         <option>Saturday/Sunday</option>
                                     </select>
                                 </div>
-                            </form>
-                            <div class="checkbox">
-                                    <label style="font-weight: bold;">
-                                        <input type="checkbox">Camping?
-                                    </label>
-                                </div>
-                                <form role="form" name="alert-amount" class="form-amount">
-                                <div class="form-group">
-                                    <label for="sel1">Amount of tickets (max 6):</label>
-                                    <select class="form-control" id="amount_tickets">
-                                        <option>0</option>
+                                    <div class="form-clear"></div>
+                                <div class="form-group" style="width: 70%;">
+                                    <label for="form_amount">Amount of tickets (max 6):</label>
+                                    <select class="form-control" id="amount_tickets" name="form_amount">
+                                        <option></option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -266,6 +277,14 @@
                                         <option>6</option>
                                     </select>
                                 </div>
+                                    <div class="checkbox">
+                                        <label for="form_camping" style="font-weight: bold;">
+                                            <input type="checkbox" name="form_camping"> Camping?
+                                        </label>
+                                </div>
+                                    <div class="form-clear"></div>
+                                    <div class="form-clear"></div>
+                                    <button id="submit" name="submit" type="submit" value="Send" class="btn btn-block btn-sm btn-success">Checkout <span class="glyphicon glyphicon-shopping-cart"></span></button>
                             </form>
                                 <div class="form-clear"></div>
                                 </div>
@@ -286,19 +305,18 @@
 							<p>
 								This three day camping experience will allow you to see all artists and enjoy the whole festival (Friday-Saturday-Sunday). If you wish to include camping you can do so for a group upto 6 people. <br><a href=""><b>More Info</b></a>
 							</p>
-                            <div class="home_ticketform">
-                                <form role="form" name="alert-amount" action="" method="post" class="form-amount" style="width:100%; height: 74px;">
-                            </form>
-                            <div class="checkbox">
-                                    <label style="font-weight: bold;">
-                                        <input type="checkbox">Camping?
-                                    </label>
+                            <div class="home_ticketform">       
+                                <form role="form" class="form">
+                                    <div class="checkbox">
+                                        <label for="form_camping" style="font-weight: bold;">
+                                            <input type="checkbox" name="form_camping"> Camping?
+                                        </label>
                                 </div>
-                                <form role="form" name="alert-amount" class="form-amount">
-                                <div class="form-group">
-                                    <label for="sel1">Amount of tickets (max 6):</label>
-                                    <select class="form-control" name="choose-amount" id="amount_tickets">
-                                        <option>0</option>
+                                    <div style="height: 70px;"></div>
+                                <div class="form-group" style="">
+                                    <label class="" for="form_amount">Amount of tickets (max 6):</label>
+                                    <select class="form-control" name="form_amount" id="amount_tickets">
+                                        <option></option>
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -307,6 +325,9 @@
                                         <option>6</option>
                                     </select>
                                 </div>
+                                    <div style="height: 3px;"></div>
+
+                                    <button id="submit" name="submit" type="submit" value="Send" class="btn btn-block btn-sm btn-success">Checkout <span class="glyphicon glyphicon-shopping-cart"></span></button>
                             </form>
                                 <div class="form-clear"></div>
                                 </div>
@@ -318,14 +339,11 @@
 					</div>
 				</div>
 			</div>
-			
-            <a href="#" type="submit" class="btn btn-block btn-lg btn-success">Checkout <span class="glyphicon glyphicon-shopping-cart"></span></a>
-			
 		</div>
 	</div>
 	<div class="row clearfix" id="divprops">
 		<div class="col-md-4 column">
-			 <address> <strong>DARS International, ltd.</strong><br> Rachelsmolen 1<br> 5612 MA Eindhoven<br> <abbr title="Phone">P:</abbr> (06) 8191-3644</address>
+			 <address> <strong>DARS International, ltd.</strong><br> Rachelsmolen 1<br> 5612 MA Eindhoven<br> <abbr title="Phone">P:</abbr> (06) 1234-5678</address>
 		</div>
 		<div class="col-md-4 column" id="footer_socialmedia">
 			<div>

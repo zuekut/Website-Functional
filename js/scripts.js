@@ -82,42 +82,22 @@ $(document).ready(function(){
     
 });
 
-/*Requieres jQuery*/
- $('.modal').bind('hide', function () {
-	var iframe = $(this).children('div.modal-body').find('iframe'); 
-	var src = iframe.attr('src');
-	iframe.attr('src', '');
-	iframe.attr('src', src);
-});
+/*Stop youtube playback in lineup.php*/
 
-/*back to top 
-if ($('#back-to-top').length) {
-    var scrollTrigger = 100, // px
-        backToTop = function () {
-            var scrollTop = $(window).scrollTop();
-            if (scrollTop > scrollTrigger) {
-                $('#back-to-top').addClass('show');
-            } else {
-                $('#back-to-top').removeClass('show');
-            }
-        };
-    backToTop();
-    $(window).on('scroll', function () {
-        backToTop();
-    });
-    $('#back-to-top').on('click', function (e) {
-        e.preventDefault();
-        $('html,body').animate({
-            scrollTop: 0
-        }, 700);
-    });
-} */
+///*Requires jQuery*/
+// $('.modal').bind('hide', function () {
+//	var iframe = $(this).children('div.modal-body').find('iframe'); 
+//	var src = iframe.attr('src');
+//	iframe.attr('src', '');
+//	iframe.attr('src', src);
+//});
+
 
 /*countdown*/
 $(function(){
 	
 	var note = $('#note'),
-		ts = new Date(2015, 6, 27),
+		ts = new Date(2015, 6, 24),
 		newYear = true;
 	
 	if((new Date()) > ts){
@@ -139,10 +119,10 @@ $(function(){
 			message += seconds + " sec" + ( seconds==1 ? '':'s' ) + " <br />";
 			
 			if(newYear){
-				message += "left until RJ Festival!";
+				message += "left until Wood Festival!";
 			}
 			else {
-				message += "left until RJ Festival!";
+				message += "left until Wood Festival!";
 			}
 			
 			note.html(message); 

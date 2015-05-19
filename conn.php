@@ -29,33 +29,27 @@ $type3_available_count = mysql_num_rows($type3_available);
 $type3_count = mysql_num_rows($type3);
 $type3_percent = ($type3_available_count / $type3_count) * 100;
 
-//change color of progress bar according to availability
+//change color of progress bar according to availability. Currently yellow = 75% or less. Red = 25% or less.
 $progressbar_type1 = "progress-bar-success";
-
 if($type1_percent < 75){
     $progressbar_type1 = "progress-bar-warning";
 }
-
 if($type1_percent < 25){
     $progressbar_type1 = "progress-bar-danger";
 }
 
 $progressbar_type2 = "progress-bar-success";
-
 if($type2_percent < 75){
     $progressbar_type2 = "progress-bar-warning";
 }
-
 if($type2_percent < 25){
     $progressbar_type2 = "progress-bar-danger";
 }
 
 $progressbar_type3 = "progress-bar-success";
-
 if($type3_percent < 75){
     $progressbar_type3 = "progress-bar-warning";
 }
-
 if($type3_percent < 25){
     $progressbar_type3 = "progress-bar-danger";
 }
@@ -68,5 +62,5 @@ if($type3_percent < 25){
 //echo "$type3_count Rows\n";
 //echo "$all_tickets_count Total Tickets\n";
 //echo "$type1_percent %\n";
-echo "$type1_available_count \n";
+//echo "$type1_available_count \n";
 ?>
