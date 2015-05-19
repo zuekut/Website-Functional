@@ -2,7 +2,7 @@
 
 
 <?php
-//PHP for checking whether user has selected tickets correctly.
+//PHP for checking whether user has selected tickets and camping correctly.
 
 //define variables
 $form_dayErr = $form_amountErr = $form_campingErr = "";
@@ -11,14 +11,21 @@ $form_day = $form_amount = $form_camping = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (empty($_POST['form_amount'])) {
-        $form_amountErr = '<div id="alert-notickets" class="alert alert-dismissable alert-danger"><button type="button" class="close" aria-hidden="false">×</button>
+        $form_amountErr = '<div id="alert-notickets" class="alert alert-dismissable alert-danger">
 				<h4>
 					Processing Error!
-				</h4> <strong>Warning!</strong> There was an error processing your order. Reason: You have not selected any tickets. <a href="#" class="alert-link">FAQ</a>
+				</h4> <br><strong>Warning!</strong> There was an error processing your order. Please try again! <br><br><small><strong><i>Error 101</i></strong>: You have not selected any tickets. See <a href="#ticket_faq" class="alert-link" data-toggle="modal">FAQ</a>. If error persists please contact the server administrator</small>
                 </div>';
     } else {
-        echo "<h1>Successfull Test!</h1>";
+        
+        if (empty($_POST['form_camping'])){
+        echo "<script type='text/javascript'>window.onload=function(){ $('#campingModal').modal('show')}; </script>";
+    } else {
+        echo "<h1>PHP Test complete</h1>";
     }
+    }
+    
+    
 }
 
 ?>
@@ -174,8 +181,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					Unforgettable Experience <small>The Future is Here</small>
 				</h1>
 			</div>
-			<p>
-				<strong><i>New 2015!!!</i></strong> Automatic Payment System with own ID-cards <br><br><strong>RJ Wood Festival</strong> is one of the most exuberant events in the Netherlands. The festival welcomes <strong>25,000 people</strong> and hosts one of the most famous artists. Apart from everything the visitors could expect from a decent festival camping, there are several <strong>unique features</strong>. Features such as excellent service desk with an option on lending many essential and practical items and high quality food stands.
+			<p style="font-size: 18px;">
+				<strong><i>New 2015!!!</i></strong> Automatic Payment System with own ID-cards <br><br><strong>Wood Festival</strong> is one of the most exuberant events in the Netherlands. The festival welcomes <strong>25,000 people</strong> and hosts one of the most famous artists. Apart from everything the visitors could expect from a decent festival camping, there are several <strong>unique features</strong>. Features such as excellent service desk with an option on lending many essential and practical items and high quality food stands.
 			</p>
             
 		</div>
@@ -187,13 +194,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 					Tickets <small>Choose your ticket</small>
 				</h1>
 			</div>
-            <h2>
-				Choice
-			</h2>
-			<p>
-				Text about choosing ticket and how to do it. Refer to FAQ etc. Put any relevant information here. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. <em>Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui.</em> Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. <small>Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu.</small>
+			<p style="font-size: 15px;">
+                Below you will find various ticket types for Wood Festival! Whether you want to go One-Day or go full out with a Three-Day ticket + Camping, we got it all for you. The only restriction is that you order the same ticket for you and your friends. You can keep track of the amount of tickets there are left for each ticket type through the real-time tracker on the bottom. Keep in mind that tickets will be sold out fast! <br><br><em>For full ticket restrictions and any other questions, please refer to our <a href="#ticket_faq" data-toggle="modal">FAQ</a></em>
 			</p>
 			<span class="error"><?php echo $form_amountErr; ?></span>
+            <span class="error"><?php echo $form_campingErr; ?></span>
 			<div class="row">
 				<div class="col-md-4">
 					<div class="thumbnail">
@@ -203,7 +208,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								One-Day <br><strong>€50</strong>
 							</h3>
 							<p>
-								The one-day ticket will allow you to visit the festival for one whole day. You can choose the day you wish to enter, but will have to leave at the end of the day. No camping possible. <br><a href=""><b>More Info</b></a>
+								The one-day ticket will allow you to visit the festival for one whole day. You can choose the day you wish to enter, but will have to leave at the end of the day. No camping possible. <br><a href="#ticket_moreinfo" data-toggle="modal"><b>More Info</b></a>
 							</p>
                             
                             <div class="home_ticketform">
@@ -250,10 +255,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						<img alt="100x200" src="img/2Leaves.jpg" style="width: 350px; height: 200px;">
 						<div class="caption">
 							<h3>
-								Two-Day <br><strong>€90 (+€50 p/g)</strong>
+								Two-Day <br><strong>€90 (+€50 camping p/g)</strong>
 							</h3>
 							<p>
-								The two-day experience will allow you to visit the festival on 2 consecutive days (Friday/Saturday or Saturday/Sunday). You can also purchase an area at the camping for up to 6 people. <br><a href=""><b>More Info</b></a>
+								The two-day experience will allow you to visit the festival on 2 <em>consecutive</em> days (Friday/Saturday or Saturday/Sunday). You can also purchase an area at the camping for up to 6 people. <br><a href="#ticket_moreinfo" data-toggle="modal"><b>More Info</b></a>
 							</p>
                             <div class="home_ticketform">
                                 <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form-inline">
@@ -279,8 +284,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </div>
                                     <div class="checkbox">
                                         <label for="form_camping" style="font-weight: bold;">
-                                            <input type="checkbox" name="form_camping"> Camping?
+                                            <input type="checkbox" name="form_camping"> Camping
                                         </label>
+                                        
                                 </div>
                                     <div class="form-clear"></div>
                                     <div class="form-clear"></div>
@@ -303,13 +309,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								Three-Day <br><strong>€130 (+€100 camping p/g)</strong>
 							</h3>
 							<p>
-								This three day camping experience will allow you to see all artists and enjoy the whole festival (Friday-Saturday-Sunday). If you wish to include camping you can do so for a group upto 6 people. <br><a href=""><b>More Info</b></a>
+								This three day camping experience will allow you to see all artists and enjoy the whole festival (Friday-Saturday-Sunday). If you wish to include camping you can do so for a group upto 6 people. <br><a href="#ticket_moreinfo" data-toggle="modal"><b>More Info</b></a>
 							</p>
                             <div class="home_ticketform">       
-                                <form role="form" class="form">
+                                <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form">
                                     <div class="checkbox">
                                         <label for="form_camping" style="font-weight: bold;">
-                                            <input type="checkbox" name="form_camping"> Camping?
+                                            <input type="checkbox" name="form_camping"> Camping
                                         </label>
                                 </div>
                                     <div style="height: 70px;"></div>
@@ -372,11 +378,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     </div>
 </div>
+<!--BEGINNING OF MODALS-->
+   <div class="modal" id="ticket_faq" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Ticket FAQ</h4>
+                </div>
+                <div class="modal-body">
+                    <p>FAQ Shit goes here</p>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   <div class="modal" id="ticket_moreinfo" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Ticket Information</h4>
+                </div>
+                <div class="modal-body">
+                    <p>More information about tickets goes here</p>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-default" data-dismiss="modal">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bs-example-modal-sm" id="campingModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">Are you sure?</div>
+                <div class="modal-body"><p>You have not selected camping. Are you sure you <strong>do not</strong> want camping?</p></div>
+                <div class="modal-footer"> <a class="btn btn-default btn-success" href="">Yes</a><a class="btn btn-default btn-danger" href="#buytickets" data-dismiss="modal">Go back</a></div>
+            </div>
+        </div>
+</div>
+<!--BACK TO TOP WRAPPER-->
 <div class="scroll-top-wrapper ">
 	<span class="scroll-top-inner">
 		<i class="fa fa-2x fa-arrow-circle-o-up"></i>
 	</span>
-</div> 
+</div>
+ 
 </body>
     
    

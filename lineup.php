@@ -30,10 +30,8 @@
   <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
   <link rel="shortcut icon" href="img/favicon.png">
   
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/scripts.js"></script>
-    <script type="text/javascript" src="js/jquery.countdown.js"></script>
+	
+	
 
     
 
@@ -1914,5 +1912,10 @@
 	</span>
 </div>     
 </body>
+<!--Loading Scripts-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<!--Loading Completed-->
     
 </html>
