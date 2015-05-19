@@ -33,35 +33,13 @@ function scrollToTop() {
 	$('html, body').animate({scrollTop: offsetTop}, 500, 'linear');
 }
 
-//Alerts
-$(document).ready(function () {
-    // Run this code only when the DOM (all elements) are ready
-    
-    $('form[name="altert-amount"]').on("submit", function (e) {
-        // Find all <form>s with the name "register", and bind a "submit" event handler
-        
-        // Find the <input /> element with the name "username"
-        var chooseamount = $(this).find('select[name="choose-amount"]');
-        if ($.trim(chooseamount.val()) === "0") {
-            // If its value is empty
-            e.preventDefault();    // Stop the form from submitting
-            $("#alert-notickets").slideDown(400);    // Show the Alert
-        } else {
-            e.preventDefault();    // Not needed, just for demonstration
-            $("#alert-notickets").slideUp(400, function () {    // Hide the Alert (if visible)
-                alert("Would be submitting form");    // Not needed, just for demonstration
-                chooseamount.val("0");    // Not needed, just for demonstration
-            });
-        }
+/*Alerts*/
+
+window.setTimeout(function() {
+    $("#alert-notickets").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove(); 
     });
-    
-    $(".alert").find(".close").on("click", function (e) {
-        // Find all elements with the "alert" class, get all descendant elements with the class "close", and bind a "click" event handler
-        e.stopPropagation();    // Don't allow the click to bubble up the DOM
-        e.preventDefault();    // Don't let any default functionality occur (in case it's a link)
-        $(this).closest(".alert").slideUp(400);    // Hide this specific Alert
-    });
-});
+}, 10000);
 
 /*scroll to div*/
 $(document).ready(function(){
