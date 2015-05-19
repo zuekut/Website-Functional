@@ -1,3 +1,5 @@
+<?php include("conn.php");?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -218,7 +220,9 @@
                                 <div class="form-clear"></div>
                                 </div>
                             <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">9346 left!</div>
+                                <div class="progress-bar <?php echo ($progressbar_type1) ?>" role="progressbar" aria-valuenow="<?php echo ($type1_available_count) ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo ($type1_percent) ?>%;">
+                                    <?php echo ($type1_available_count) ?> left!
+                                </div>
 			</div>
 						</div>
 					</div>
@@ -266,7 +270,7 @@
                                 <div class="form-clear"></div>
                                 </div>
                             <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-warning" style="width: 75%;"> 1253 left!</div>
+                                <div class="progress-bar <?php echo ($progressbar_type2) ?>" role="progressbar" aria-valuenow="<?php echo ($type2_available_count) ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo ($type2_percent) ?>%;"> <?php echo ($type2_available_count) ?> left!</div>
 			</div>
 							
 						</div>
@@ -307,7 +311,7 @@
                                 <div class="form-clear"></div>
                                 </div>
                             <div class="progress progress-striped active">
-                                <div class="progress-bar progress-bar-danger" style="width: 90%;"> 208 left!</div>
+                                <div class="progress-bar <?php echo ($progressbar_type3) ?>"aria-valuenow="<?php echo ($type3_available_count) ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo ($type3_percent) ?>%;"> <?php echo ($type3_available_count) ?> left</div>
 			</div>
 							
 						</div>
