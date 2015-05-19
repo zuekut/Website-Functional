@@ -17,6 +17,7 @@
     <link href="css/jquery.countdown.css" rel="stylesheet">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="css/bootstrap-social.css" rel="stylesheet">
+    <link href="css/bootstrap-datepicker.min.css" rel="stylesheet">
 
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
@@ -34,6 +35,7 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/jquery.countdown.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
 
     
 
@@ -100,7 +102,86 @@
                 </a>
             </div>
 		</div>
+
 		
+	</div>
+    <div class="row clearfix" id="divprops">
+        <div class="page-header">
+            <h1>
+                One step away! <small>Some details before you pay</small>
+            </h1>
+        </div>
+        <div class="col-md-12 column">
+            <h3>Thank you, for selecting your tickets! Please enter all details below for each ticketholder.</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-9 column">
+                <p style="font-size:18px;">Placeholder Visitor1</p>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="visitorFirstName1" class="col-sm-2 control-label">First Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="visitorFirstName1" placeholder="i.e. Robert">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="visitorLastName1" class="col-sm-2 control-label">Last Name</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="visitorLastName1" placeholder="i.e. Johnson">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="visitorDateOfBirth1" class="col-sm-2 control-label">Date of Birth</label>
+                        <div class="col-sm-10" id="visitorDateOfBirth">
+                            <input type="text" class="form-control" placeholder="dd/mm/yyyy">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="visitorSex1" class="col-sm-2 control-label">Sex</label>
+                        <div class="col-sm-10">
+                            <label class="radio-inline">
+                                <input type="radio" name="visitorSexOptions" id="inlineRadio1" value="option1"> <abbr title="Male">M</abbr>
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="visitorSexOptions" id="inlineRadio2" value="option2"> <abbr title="Female">F</abbr>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="visitorEmail1" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="visitorEmail1" placeholder="i.e. woodfestival@gmail.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-12">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> I agree to the <strong><a href="#">Terms of Service</a></strong>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Proceed to payment</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2" id="orderStatus">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="text-align: center;">My Order</h3>
+                    </div>
+                    <div class="panel-body">
+                            Type: <i>One Day (Friday)</i>
+                            <br>Quantity: <i>x2</i>
+                    </div>
+                    <div class="panel-footer">Total: <i>&euro; 100</i></div>
+                </div>
+            </div>
+        </div>
 	</div>
 	<div class="row clearfix" id="divprops">
 		<div class="col-md-4 column">
@@ -133,8 +214,15 @@
 
 
 </div>
-    
-  
+   <script> 
+       $('#visitorDateOfBirth input').datepicker({
+           format: "dd/mm/yyyy",
+           startDate: "01/01/1900",
+           endDate: "24/06/1996",
+           startView: 1,
+           autoclose: true
+       });
+    </script>
 </body>
     
    
