@@ -1,3 +1,6 @@
+<?php
+    include("include.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,41 +121,7 @@
             <div class="col-md-9 column">
                 <p style="font-size:18px;">Placeholder Visitor1</p>
                 <form class="form-horizontal">
-                    <div class="form-group">
-                        <label for="visitorFirstName1" class="col-sm-2 control-label">First Name</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="visitorFirstName1" placeholder="i.e. Robert">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="visitorLastName1" class="col-sm-2 control-label">Last Name</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" id="visitorLastName1" placeholder="i.e. Johnson">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="visitorDateOfBirth1" class="col-sm-2 control-label">Date of Birth</label>
-                        <div class="col-sm-10" id="visitorDateOfBirth">
-                            <input type="text" class="form-control" placeholder="dd/mm/yyyy">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="visitorSex1" class="col-sm-2 control-label">Sex</label>
-                        <div class="col-sm-10">
-                            <label class="radio-inline">
-                                <input type="radio" name="visitorSexOptions" id="inlineRadio1" value="option1"> <abbr title="Male">M</abbr>
-                            </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="visitorSexOptions" id="inlineRadio2" value="option2"> <abbr title="Female">F</abbr>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="visitorEmail1" class="col-sm-2 control-label">Email</label>
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" id="visitorEmail1" placeholder="i.e. woodfestival@gmail.com">
-                        </div>
-                    </div>
+                    <?php echo ($form_creator); ?>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-12">
                             <div class="checkbox">
