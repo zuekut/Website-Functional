@@ -28,7 +28,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="shortcut icon" href="img/festivalwood_logo.png">
   
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -42,8 +42,11 @@
 		<div class="col-md-12 column">
 			<div class="jumbotron">
                 <p id="text_festivaltitle">R.J. Wood Festival</p>
-                <div id="youtubevid"><iframe width="672" height="378" src="https://www.youtube.com/embed/BR_DFMUzX4E?showinfo=0&iv_load_policy=3&controls=0&autoplay=1" frameborder="0" allowfullscreen></iframe></div>
-                <!--<p id="text_daysleft">Days left until RJ Festival</p>-->
+                <div id="youtubevid">
+                    <video controls="controls" width="672" height="378" preload="auto" autoplay>
+                        <source src="./img/WoodsPromoPreMovie.mp4" type="video/mp4" />
+                    </video>
+                </div>                <!--<p id="text_daysleft">Days left until RJ Festival</p>-->
                 <div id="countdown"></div>
 				<p>  
 					<a href="home.php#buytickets" class="btn btn-lg btn-danger" id="btn_buynow"><span class="glyphicon glyphicon-log-out"></span> Buy Tickets Now!</a>

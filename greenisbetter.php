@@ -28,7 +28,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
   <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="img/festivalwood_logo.png">
   
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -105,16 +105,112 @@
     <div class="row content-standard" id="divprops" style="padding: 30px;">
         <div class="page-header">
             <h1>Green is Better <small>Environmentally Friendly</small></h1>
+
         </div>
-        <div>
-            <p style="font-size: 16px;">
-                We at Wood Festival strive to keep the world safe and sustainable to keep people dancing. We believe in a sustainable future where we care for people & planet.<br><br>
-                This year we ask for special attention for the way we handle the waste during your stay at Wood Festival. We feel the responsibility to cherish this lovely piece of nature. That's why we want to inspire all our visitors and fans to help us keep the festival and camping area as clean as possible.<br><br>
-                Lets reduce our waste and use the <strong>garbage collecting points</strong> to deposit all your garbage. The collecting points will be clearly indicated and can be found at the parking lots, camping site and festival ground. In addition, food and drinks that you will order will be served on <strong>100% recycable</strong> paper plates and cups, which will greatly help the reduction of plastic wastes in the world.<br>
-                <br><i>Don't waste the woods. Love the woods!</i>
-            </p>
+
+        <div class="container" style="width: 100%">
+            <div id="content">
+                <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                    <li role="presentation" class="active"><a href="#mission" data-toggle="tab"><strong>Mission</strong></a></li>
+                    <li role="presentation"><a href="#water" data-toggle="tab"><strong>Water</strong></a></li>
+                    <li role="presentation"><a href="#gardens" data-toggle="tab"><strong>GARDENS & REGENERATION</strong></a></li>
+                    <li role="presentation"><a href="#reuse" data-toggle="tab"><strong>REUSE RECYCLE COMPOST</strong></a></li>
+                </ul>
+                <div id="my-tab-content" class="tab-content">
+                    <div class="tab-pane fade in active" id="mission">
+                        <h1>Mission</h1>
+                        <img alt="1080x300" src="img/GreenIsBetter.jpg" class="img-rounded" style="width: 1080px; height: 300px;">
+                        <p>Festivals must provide tools for change. It is Wood’s commitment to create a reality that relates positively with the environment and contributes to the education and knowledge of all.
+                            Woods's Environmental Program has been designed to provide the opportunity to become active co-creators of evolution.
+                            Over the course of this year’s project, Wood Festival has developed several pioneering projects in the following areas:<br>
+                            – Sustainable energy resources<br>
+                            – Sanitation (Compost Toilets)<br>
+                            – On site Water Treatment<br>
+                            – Reuse of materials for building and reduced consumption<br>
+                            – Regeneration of habitats and ecosystems<br>
+                            – Recycling and composting of waste<br>
+                            – Promotion of public transportation, cycling and car-sharing to reduce CO2 emissions<br>
+                            – Eco-Art<br>
+                            – Bio-Construction and bio-fuel<br>
+                            – Social sustainability: Integration of minorities and people with special needs; develop a credible alternative to the models of mainstream culture<br>
+                            – Education in the principles and practice of permaculture and other environmental designs.<br>
+                            – Hosting of presentations by leading opinion makers and project leaders in the area of environmental consciousness.<br><br>
+
+                            Wood’s firm and pioneering commitment to be an environmentally conscious event has been recognized by several prestigious awards and it has been nominated for:
+                            <b><br>- Outstanding Greener Festival Award 2015.</b><br>
+                            <b>- European Festival Award 2015 – Green’n’Clean Festival of the Year.</b><br>
+                            <b>- European Festival Award 2015 – Shortlisted as one of the three greenest festivals of the year.</b><br>
+                            <b>- Green Inspiration Award 2015.</b><br>
+                            <b>- Member of the United Nations Music & Environment Stakeholder Initiative.</b><br><br>
+                            Wood's Environmental Program is not sponsored. It is a fully independent strategy, financed by ticket sales and developed by the Wood Festival. Its success depends upon the contribution of countless eco-team volunteers and of all the festival who have fully integrated Wood’s ethos in their lives.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="water">
+                        <h1>Water</h1>
+                        <img alt="1080x400" src="img/Water.jpg" class="img-rounded" style="width: 1080px; height: 400px;">
+                        <p><b>All water used before, during and after the Wood Festival is returned to nature, as clean as we received it.</b>
+                            Water is the driving force in nature. It does not resist, it flows. At Wood land we take it seriously to clean the water that we used before, during and after Festival. It is returned to nature as clean as we received it.<br>
+                            All the water from restaurants, bars, showers and other facilities is recycled on site by a radically innovative biological treatment system. Wood's water treatment system is based on bio-remediation and evaporate-transpiration. This means that all grey water (from showers and sinks) passes through a living filter before it is allowed to infiltrate back in the soil.<br>
+                            The grey water passes through a series of garden beds where it is allowed to evaporate while the roots of aquatic plants undertake the first cleaning of the water removing minerals and storing them in their leaves.
+                            The remaining minerals are circulated with the help of enzymes that are added to the water, specially constructed to allow these biological cycles to develop.<br>
+                            After enough time has passed, a complete ecosystem develops in the water and around it. This is the natural state of water, providing habitat for many animals and plants and thus sustaining life.
+                            The result is crystal clear water ready for re-use in irrigation. No further treatment is required and all environmental regulations are met. In fact the water is tested.<br>
+                            Wood's pioneering water treatment facility is proudly on display right at the entrance of the festival. Here you can see several bamboo species, grasses, floating water plants and wetland species working together to clean the water.  You can actively support this process by being conscious of saving water and using only what is necessary.<br>
+                            In 2015 Wood was nominated for the prestigious "Green Inspiration Award" for this water system.
+                            Free Drinking Water:
+                            All water fountains scattered across Wood Land offer free drinking water for your comfort. This water comes from the public grid. We ask you to be conscious and not waste this precious resource.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="gardens">
+                        <h1>GARDENS & REGENERATION</h1>
+                        <p>Few months before Wood an international team of expert permaculture gardeners and volunteers initiate the cultivation of the many gardens all over the Wood Land.
+                            Luscious mandala gardens, water gardens, artistic spiral gardens are created offering the possibility to witness the marvels of nature and its breath-taking beauty.<br><br>
+                            During Wood, the gardens are special places to reconnect with nature's grand design. You will find basil, sage, rosemary and many other herbs scattered amongst the pumpkins, tomatoes and of course flowers.  Eat the organic delights remembering to tread lightly between the living creatures, insects and plants alike.<br>
+                            The Great Mother has orchestrated every little detail to create a perfect system for us to live in!
+                        </p>
+                        <img alt="720x480" src="img/Gardens.jpg" class="img-rounded" style="width: 900px; height: 480px;">
+
+                    </div>
+                    <div class="tab-pane fade" id="reuse">
+                        <h1>REUSE RECYCLE COMPOST</h1>
+
+                        <p><strong>WE MAKE SOIL!</strong><br>Your body is a soil making machine!  It takes Mother Nature up to 500 years to make 2 cm of soil and humans 2 minutes to destroy it through unsustainable practices. Yet by simply composting your food scraps and using dry toilets you are making soil.
+                            We would collect all the organic waste from the restaurants. This includes the bio disposable bamboo plates and cups which according to our estimation will amount to 25 tons of organic waste collected. Through simple composting methods we will approximately make 5 tons of soil.
+                            This soil is given back to the Earth in the form of gardens creating organic food for you to collect in the next edition of the festival. You can turn your food scraps into soil by simply throwing them in the right bin. And let us do the rest!
+                        </p>
+                        <p><strong>RECYCLING</strong><br>Recycling is one of our greatest challenges. In this years project the separation and recycling of garbage will be completed outside of Wood Land. It will be collected by our team during the festival, placed in containers across the site, then removed and later separated in a public recycling unit.  <br>
+                            The estimated amount of recycled materials is estimated to reach 9 tons of garbage!
+                            We can improve on that number. Do your part and throw your recyclables in the designated bins, making sure that more stuff will be recycled into other stuff.
+                        </p>
+
+                        <p><strong>RE-USING MATERIALS</strong><br> Keeping up with Wood’s tradition and commitment, we re-used materials from previous numerous festival editions and from other events taking place in the Netherlands before Wood. Our Recycle and Reuse Policy has saved 311 tons of garbage from being sent to the landfill. Let's do the math!<br>
+                            • CO2 emissions avoided by reusing materials from other events: 264 tons = Emissions of 176 houses of three people = Offset from 6.769 trees during one year<br><br>
+                            • Recycle and Reuse policies saved 311 tons of garbage from being sent to the landfill, corresponding to 801 tons of CO2 = Emissions of 534 houses of three people = Offset of 20.530 trees during one year.
+                        </p>
+                        <img alt="1080x400" src="img/Recycle.jpg" class="img-rounded" style="width: 1080px; height: 400px;">
+
+                    </div>
+                    <div class="tab-pane fade" id="disability">
+                        <h1>People with disability</h1>
+                        <p>
+                            Wood Festival puts in a great effort to make the festival accessible to people with disability. So we have paid a lot of attention to the accessibility of the festival site and its surroundings:
+                        </p>
+                        <ul>
+                            <li>A shuttle for the physically challenged will transport patrons from the main entrance to and from a drop off point near each stage accessible area.</li>
+                            <li>Guidance dogs are allowed on the festival grounds. Make sure they are easy recognizable.</li>
+                            <li>Adapted toilets are situated in locations all over the festival site and at the Camping</li>
+                            <li>The accessibility on the festivalgrounds is guaranteed thanks to the wooden floors.</li>
+                        </ul>
+                        <p>Should you wish to make use of the aforementioned facilities? Have you got a handicap and are you facing any problems to which you can’t find a solution? Would you just like some more information about this issue? Please send an e-mail to:<a href="mailto: woodfestival@wood.com">woodfestival@wood.com</a></p>
+
+                    </div>
+                </div>
+            </div>
         </div>
-        
+        <!--
+
+
+        -->
     </div>
 	<div class="row clearfix" id="divprops">
 		<div class="col-md-4 column">
