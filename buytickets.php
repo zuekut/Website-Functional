@@ -66,7 +66,7 @@
 							<a href="home.php">Home</a>
 						</li>
 						<li class="active">
-							<a href="home.php#buytickets">BUY Tickets</a>
+							<a href="">BUY Tickets</a>
 						</li>
                         <li>
 							<a href="lineup.php">Line-Up</a>
@@ -78,7 +78,7 @@
 							<a href="greenisbetter.php">Green is Better</a>
 						</li>
                         <li>
-							<a href="login_members.php">Login/Members</a>
+							<a href="#loginModal" data-toggle="modal">Login/Members</a>
 						</li>
                         <li>
 							<a href="aboutus.php">About Us</a>
@@ -168,15 +168,6 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox"> I agree to the <strong><a href="#">Terms of Service</a></strong>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" class="btn btn-default">Proceed to Payment</button>
                         </div>
                     </div>
@@ -235,7 +226,33 @@
        });
     </script>
 </body>
-    
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="loginModalLabel">Login</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="username-login" class="control-label">Username:</label>
+            <input type="text" class="form-control" id="username">
+          </div>
+          <div class="form-group">
+            <label for="password-login" class="control-label">Password:</label>
+            <input type="text" class="form-control" id="password-login">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
    
     
 </html>
