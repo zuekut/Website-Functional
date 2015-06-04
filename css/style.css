@@ -1,0 +1,241 @@
+/* Customized styles by Remco
+
+*/
+.scroll-top-wrapper {
+    position: fixed;
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+	text-align: center;
+	z-index: 99999999;
+    background-color: mediumseagreen;
+	color: #eeeeee;
+	width: 50px;
+	height: 48px;
+	line-height: 48px;
+	right: 30px;
+	bottom: 30px;
+	padding-top: 2px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.scroll-top-wrapper:hover {
+	background-color: lightseagreen;
+}
+.scroll-top-wrapper.show {
+    visibility:visible;
+    cursor:pointer;
+	opacity: 1.0;
+}
+.scroll-top-wrapper i.fa {
+	line-height: inherit;
+}
+
+@media (min-width: 1200px){
+    
+    html{
+        overflow-y: scroll;
+    
+    }
+    /*navigation */
+    .navbar{
+        background: none;
+        
+    }
+    .navbar-default .navbar-nav > li > a {
+        color: white;
+        font-weight: bold;
+    }
+    
+    .navbar-default .navbar-nav > li > a:hover,
+    .navbar-default .navbar-nav > li > a:focus {
+        color: limegreen;
+        background-color: transparent;
+    }
+    
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus {
+        color: #555555;
+        background-color: #e7e7e7;
+    }
+    
+   
+    
+    .rjnavigation{
+        top: 40px;
+        background: url(../img/black-50-trans.png);
+        border-radius: 6px;
+        padding-top: 10px;
+        
+    }
+     #rjnavbar{
+        width: 770px;
+    }
+    
+    #text_daysleft{
+        text-align: center;
+        color: white;
+        font-size: 2.0em;
+    }
+    #note{
+        color: #666666;
+        font-size: 12px;
+        margin: 0 auto;
+        padding: 4px;
+        text-align: center;
+        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+        width: 400px;
+    }
+    
+    #btn_buynow{
+        position: relative;
+        left: 300px;
+    
+        font-size: 2.0em;
+    }
+    
+    #btn_next{
+        width: 100%;
+        font-size: 1.5em;
+    }
+    
+    
+ 
+    span.text-content span {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    #btn_moreartists{
+        position: relative;
+        margin: 15px;
+        left: 480px;
+        
+    }
+    
+    .progress{
+        
+    }
+    
+    .checkbox{
+        padding-top: 28px;
+        width: 30%;
+        height: 50px;
+        float: left;
+        font-size: 1em;
+        
+    }
+    
+    .form-amount{
+        width: 69%;
+        float: right;
+        
+    }
+    
+    .form-clear{
+        height: 10px;
+        clear: both;
+    }
+    
+
+    
+    #divprops{
+        background: url(../img/black-50-trans.png);
+        border-radius: 6px;
+        margin-bottom: 5px;
+        padding: 10px;
+        color: white;
+    }
+    
+    #socialmedia{
+        position: absolute;
+        top: 10px;
+        left: 800px; 
+    }
+    
+  
+    
+    .btn-social-icon{
+        margin-left: 5px;
+    }
+   
+    
+    #footer_socialmedia{
+        
+        margin-top: 40px;
+        text-align: center;
+    }
+    
+    #footer_copyright{
+        margin-top: 40px;
+        text-align: right;
+    }
+    
+    .lineup_day{
+        padding-left: 20px;
+        font-size: 3em;
+    }
+    #artists{
+        margin-top: 20px;
+    }
+    .well{
+        margin-top: 10px;
+        height: 300px;
+    }
+    .content-standard{
+        min-height: 700px;
+    }
+    #lineup-buttons{
+        text-align: center;
+    }
+    
+    #lineup-buttons .btn {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        font-size: 1.5em;
+    }
+    
+    #orderStatus{
+        color: dimgrey;
+        margin-left: 50px;
+    }
+    
+    span.text-content {
+        position: absolute;
+        background: rgba(0,0,0,0.8);
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        display: table;
+        height: 152px;
+        top: 5px;
+        left: 20px;
+        width: 152px;
+        opacity: 0;
+        -webkit-transition: opacity 600ms;
+        -moz-transition: opacity 600ms;
+        -o-transition: opacity 600ms;
+        transition: opacity 600ms;
+    }
+    span.text-content span {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+    div.col-l-6:hover span.text-content{
+        opacity: 1;
+    }
+    div.col-md-2:hover span.text-content{
+        opacity: 1;
+    }
+}
