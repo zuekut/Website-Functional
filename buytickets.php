@@ -111,19 +111,63 @@
     <div class="row clearfix" id="divprops">
         <div class="page-header">
             <h1>
-                One step away! <small>Some details before you pay</small>
+                Buy tickets <small>Some details before you pay</small>
             </h1>
         </div>
         <div class="col-md-12 column">
-            <h3>Thank you, for selecting your tickets! Please enter all details below for each ticketholder.</h3>
+            <p style="font-size: 15px;">Thank you, for registering! Now that you are logged in, you can buy your ticket. Please enter all details below:</p><br>
         </div>
-        <div class="row">
-            <div class="col-md-9 column">
-                <p style="font-size:18px;">Placeholder Visitor1</p>
+        
                 <form class="form-horizontal">
-                    <?php echo ($form_creator); ?>
                     <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-12">
+                        <div class="col-sm-12">
+                            <label class="col-sm-2 control-label" for="InputTicketType">Choose Ticket: </label>
+                            <select class="form-control" style="width: 20%;">
+                                <option>One Day (€50)</option>
+                                <option>Two Day (€90)</option>
+                                <option>Two Day + Camping (€140)</option>
+                                <option>Three Day (€130)</option>
+                                <option>Three Day + Camping (€210)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <label class="col-sm-2 control-label" for="InputLastName">Last Name:</label>
+                            <input class="form-control" style="width:20%;" type="text" placeholder="Smith">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <label class="col-sm-2 control-label" for="InputFirstName">First Name:</label>
+                            <input  class="form-control" style="width:20%;" type="text" placeholder="John">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <label class="col-sm-2 control-label" for="InputBirthdate">Birthdate:</label>
+                            <input  class="form-control" style="width:20%;" type="date">
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label class="col-sm-2 control-label">Sex:</label>
+                            <label class="radio-inline">
+                                <input type="radio" name="optionsSex" id="optionsRadios1" value="option1" checked>
+                                M
+                              </label>
+                              <label class="radio-inline">
+                                <input type="radio" name="optionsSex" id="optionsRadios2" value="option2">
+                                F
+                              </label>
+                        </div>
+                    <div class="form-group form-inline">
+                        <div class="col-sm-12">
+                            <label class="col-sm-2 control-label" for="InputEmail">Email:</label>
+                            <input  class="form-control" style="width:20%;" type="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox"> I agree to the <strong><a href="#">Terms of Service</a></strong>
@@ -133,12 +177,11 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default">Proceed to payment</button>
+                            <button type="submit" class="btn btn-default">Proceed to Payment</button>
                         </div>
                     </div>
                 </form>
-            </div>
-            <div class="col-md-2" id="orderStatus">
+<!--            <div class="col-md-2" id="orderStatus">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title" style="text-align: center;">My Order</h3>
@@ -149,8 +192,7 @@
                     </div>
                     <div class="panel-footer">Total: <i>&euro; 100</i></div>
                 </div>
-            </div>
-        </div>
+            </div>-->
 	</div>
 	<div class="row clearfix" id="divprops">
 		<div class="col-md-4 column">

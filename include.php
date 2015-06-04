@@ -51,6 +51,7 @@
 
 
 
+
     //testing purposes
     //echo "$type1_count Rows\n";
     //echo "$type2_count Rows\n";

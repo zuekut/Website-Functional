@@ -35,11 +35,20 @@ function scrollToTop() {
 
 /*Alerts*/
 
+
+
 window.setTimeout(function() {
     $("#alert-notickets").fadeTo(500, 0).slideUp(500, function(){
         $(this).remove(); 
     });
 }, 10000);
+
+function validate()
+{
+    if( document.onedayform.formamount.value == "" )
+    { $("#alert-notickets").show();
+    }
+}
 
 /*scroll to div*/
 $(document).ready(function(){
