@@ -63,17 +63,17 @@
 						<li>
 							<a href="homemembers.php#buytickets">BUY Tickets</a>
 						</li>
-                        <li class="active">
+                        <li>
                             <a href="lineupmembers.php">Line-Up</a>
 						</li>
                         <li>
-                            <a href="eventinfomembers.php.php">Event Info</a>
+                            <a href="eventinfomembers.php">Event Info</a>
 						</li>
                         <li>
-                            <a href="greenisbettermembers.php.php">Green is Better</a>
+                            <a href="greenisbettermembers.php">Green is Better</a>
 						</li>
-                        <li>
-                            <a href="aboutusmembers.php.php">About Us</a>
+                        <li class="active">
+                            <a href="aboutusmembers.php">About Us</a>
 						</li>
                         <li><a href="logout.php" style="color: red">Log Out</a></li>  
 					</ul>
@@ -103,6 +103,37 @@
         <div class="page-header">
             <h1>About US <small>R.J Johnson & Team</small></h1>
         </div>
+        <!-- CONTACT FORM MODAL -->
+        <div class="container">
+  <div class="row">
+    
+    <h1 class="text-center"><a href="#myModal" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Us</a></h1>
+    
+  </div>
+</div>  
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel" style="color:black">We'd Love to Hear From You</h3>
+      </div>
+      <div class="modal-body">
+        <form name="contactform" method="post" action="contactprocess.php" class="form-horizontal col-sm-12">
+            <div class="form-group"><label style="color:black">Name</label><input name='Full_Name' class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
+          <div class="form-group"><label style="color:black">Message</label><textarea name="Your_Message" class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
+          <div class="form-group"><label style="color:black">E-Mail</label><input name="Email_Address" class="form-control email" placeholder="youremail@***.com (so that we can contact you)" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text"></div>
+          <div class="form-group"><label style="color:black">Phone</label><input name="Telephone_Number" class="form-control phone" placeholder="999-999-9999" data-placement="top" data-trigger="manual" data-content="Must be a valid phone number (999-999-9999)" type="text"></div>
+          <div class="form-group"><input type="submit" value="Send it!" class="btn btn-success pull-right"><p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <!-- END CONTACT FORM MODAL -->
         <p style="font-size: 16px">
             Wood Festival was brought to life by R.J. Johnson, a world well-known DJ. While travelling around the world visiting many festivals, R.J. realised there was something missing in todays festivals. The need for a sustainable festival that takes great care of creating as little of an environmental footprint as possible, combined with the most innovative technologies, brought him to the idea of Wood Festival.<br>
             

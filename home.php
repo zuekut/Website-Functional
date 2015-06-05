@@ -260,7 +260,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 							</p>
                             
                             <div class="home_ticketform">
-                                <form role="form" name="onedayform" action="buytickets.php" method="post" class="form-amount" style="width:100%;">
+                                <form role="form" name="onedayform" action="register.php" method="post" class="form-amount" style="width:100%;">
                                     <div class="form-clear"></div>
 <!--                                <div class="form-group">
                                     <label for="form_amount">Amount of tickets (max 10):</label>
@@ -303,7 +303,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								The two-day experience will allow you to visit the festival on 2 <em>consecutive</em> days (Saturday to Sunday). You can also purchase an area at the camping. <br><a href="#ticket_moreinfo" data-toggle="modal"><b>More Info</b></a>
 							</p>
                             <div class="home_ticketform">
-                                <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form-inline">
+                                <form role="form" action="register.php" method="post" class="form-inline">
                                     <div class="form-clear"></div>
  <!--                               <div class="form-group" style="width: 70%;">
                                     <label for="form_amount2">Amount of tickets (max 6):</label>
@@ -347,7 +347,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								This three day experience will allow you to see all artists and enjoy the whole festival (Friday-Saturday-Sunday.) You can also add camping for just €40 per night! <br><a href="#ticket_moreinfo" data-toggle="modal"><b>More Info</b></a>
 							</p>
                             <div class="home_ticketform">       
-                                <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form-inline">
+                                <form role="form" action="register.php" method="post" class="form-inline">
                                     <div class="form-clear"></div>
  <!--                               <div class="form-group" style="width: 100%;">
                                    <label for="form_amount2">Amount of tickets (max 6):</label>
@@ -462,28 +462,99 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	</span>
 </div>
     <!--Login Modal-->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+<div class="modal fade bs-modal-sm" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="loginModalLabel">Login</h4>
-      </div>
+        <br>
+        <div class="bs-example bs-example-tabs">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+              <li class=""><a href="#why" data-toggle="tab">Why?</a></li>
+            </ul>
+        </div>
       <div class="modal-body">
-        <form action="checklogin.php" method="post">
-          <div class="form-group">
-            <label for="username" class="control-label">Username:</label>
-            <input type="text"  class="form-control" name="username">
-          </div>
-          <div class="form-group">
-            <label for="password" class="control-label">Password:</label>
-            <input type="password" class="form-control" name="password">
-          </div>
-                  <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <input type="submit" name ="submit" value ="Login" class="btn btn-primary">
+        <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in" id="why">
+        <p>We need this information so that you can receive access to the page where you will be able to buy your ticket. Rest assured your information will not be sold, traded, or given to anyone.</p>
+        <p></p><br> <a href="aboutus.php" class="alert-link" style="font-size: 15px;">Click here if you have any other inquiries!</a></p>
+        </div>
+        <div class="tab-pane fade active in" id="signin">
+            <form action="checklogin.php" class="form-horizontal" method="post">
+            <fieldset>
+            <!-- Sign In Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="username">Username:</label>
+              <div class="controls">
+                <input required="" id="userid" name="username" type="text" class="form-control" placeholder="Enter your username here" class="input-medium" required="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="password">Password:</label>
+              <div class="controls">
+                <input required="" id="password" name="password" class="form-control" type="password" placeholder="********" class="input-medium">
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="signin"></label>
+              <div class="controls">
+                <input type="submit" name ="submit" value ="Sign in" class="btn btn-primary">
+              </div>
+            </div>
+            </fieldset>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="signup">
+            <form class="form-horizontal" action="register.php" method="post">
+            <fieldset>
+            <!-- Sign Up Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="Email">Email:</label>
+              <div class="controls">
+                <input id="Email" name="Email" class="form-control" type="text" placeholder="youremail@****.com" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Username:</label>
+              <div class="controls">
+                <input id="username" name="username" class="form-control" type="text" placeholder="Enter your username" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="password">Password:</label>
+              <div class="controls">
+                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                <em>1-8 Characters</em>
+              </div>
+            </div> 
+            
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="confirmsignup"></label>
+              <div class="controls">
+               <input class="btn btn-success" type="submit" name="register" value="Register">
+              </div>
+            </div>
+            </fieldset>
+            </form>
       </div>
-        </form>
+    </div>
+      </div>
+      <div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>
     </div>
   </div>
 </div> 

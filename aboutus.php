@@ -103,6 +103,38 @@
         <div class="page-header">
             <h1>About US <small>R.J Johnson & Team</small></h1>
         </div>
+        
+        <!-- CONTACT FORM MODAL -->
+        <div class="container">
+  <div class="row">
+    
+    <h1 class="text-center"><a href="#myModal" role="button" class="btn btn-primary btn-lg" data-toggle="modal">Contact Us</a></h1>
+    
+  </div>
+</div>  
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel" style="color:black">We'd Love to Hear From You</h3>
+      </div>
+      <div class="modal-body">
+        <form name="contactform" method="post" action="contactprocess.php" class="form-horizontal col-sm-12">
+            <div class="form-group"><label style="color:black">Name</label><input name='Full_Name' class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
+          <div class="form-group"><label style="color:black">Message</label><textarea name="Your_Message" class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
+          <div class="form-group"><label style="color:black">E-Mail</label><input name="Email_Address" class="form-control email" placeholder="youremail@***.com (so that we can contact you)" data-placement="top" data-trigger="manual" data-content="Must be a valid e-mail address (user@gmail.com)" type="text"></div>
+          <div class="form-group"><label style="color:black">Phone</label><input name="Telephone_Number" class="form-control phone" placeholder="999-999-9999" data-placement="top" data-trigger="manual" data-content="Must be a valid phone number (999-999-9999)" type="text"></div>
+          <div class="form-group"><input type="submit" value="Send it!" class="btn btn-success pull-right"><p class="help-block pull-left text-danger hide" id="form-error">&nbsp; The form is not valid. </p></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <!-- END CONTACT FORM MODAL -->
         <p style="font-size: 16px">
             Wood Festival was brought to life by R.J. Johnson, a world well-known DJ. While travelling around the world visiting many festivals, R.J. realised there was something missing in todays festivals. The need for a sustainable festival that takes great care of creating as little of an environmental footprint as possible, combined with the most innovative technologies, brought him to the idea of Wood Festival.<br>
             
@@ -161,28 +193,99 @@
 	</span>
 </div>
     <!--Login Modal-->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
+<div class="modal fade bs-modal-sm" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="loginModalLabel">Login</h4>
-      </div>
+        <br>
+        <div class="bs-example bs-example-tabs">
+            <ul id="myTab" class="nav nav-tabs">
+              <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+              <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+              <li class=""><a href="#why" data-toggle="tab">Why?</a></li>
+            </ul>
+        </div>
       <div class="modal-body">
-        <form action="checklogin.php" method="post">
-          <div class="form-group">
-            <label for="username" class="control-label">Username:</label>
-            <input type="text"  class="form-control" name="username">
-          </div>
-          <div class="form-group">
-            <label for="password" class="control-label">Password:</label>
-            <input type="password" class="form-control" name="password">
-          </div>
-                  <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <input type="submit" name ="submit" value ="Login" class="btn btn-primary">
+        <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade in" id="why">
+        <p>We need this information so that you can receive access to the page where you will be able to buy your ticket. Rest assured your information will not be sold, traded, or given to anyone.</p>
+        <p></p><br> <a href="aboutus.php" class="alert-link" style="font-size: 15px;">Click here if you have any other inquiries!</a></p>
+        </div>
+        <div class="tab-pane fade active in" id="signin">
+            <form action="checklogin.php" class="form-horizontal" method="post">
+            <fieldset>
+            <!-- Sign In Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="username">Username:</label>
+              <div class="controls">
+                <input required="" id="userid" name="username" type="text" class="form-control" placeholder="Enter your username here" class="input-medium" required="">
+              </div>
+            </div>
+
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="password">Password:</label>
+              <div class="controls">
+                <input required="" id="password" name="password" class="form-control" type="password" placeholder="********" class="input-medium">
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="signin"></label>
+              <div class="controls">
+                <input type="submit" name ="submit" value ="Sign in" class="btn btn-primary">
+              </div>
+            </div>
+            </fieldset>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="signup">
+            <form class="form-horizontal" action="register.php" method="post">
+            <fieldset>
+            <!-- Sign Up Form -->
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="Email">Email:</label>
+              <div class="controls">
+                <input id="Email" name="Email" class="form-control" type="text" placeholder="youremail@****.com" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Text input-->
+            <div class="control-group">
+              <label class="control-label" for="userid">Username:</label>
+              <div class="controls">
+                <input id="username" name="username" class="form-control" type="text" placeholder="Enter your username" class="input-large" required="">
+              </div>
+            </div>
+            
+            <!-- Password input-->
+            <div class="control-group">
+              <label class="control-label" for="password">Password:</label>
+              <div class="controls">
+                <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                <em>1-8 Characters</em>
+              </div>
+            </div> 
+            
+            <!-- Button -->
+            <div class="control-group">
+              <label class="control-label" for="confirmsignup"></label>
+              <div class="controls">
+               <input class="btn btn-success" type="submit" name="register" value="Register">
+              </div>
+            </div>
+            </fieldset>
+            </form>
       </div>
-        </form>
+    </div>
+      </div>
+      <div class="modal-footer">
+      <center>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </center>
+      </div>
     </div>
   </div>
 </div> 

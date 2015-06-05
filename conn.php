@@ -5,7 +5,7 @@
 define('MYSQL_USER', 'root');
 define('MYSQL_PASSWORD', 'mitalex123');
 define('MYSQL_HOST', 'localhost');
-define('MYSQL_DATABASE', 'website');
+define('MYSQL_DATABASE', 'festival');
 
 
 

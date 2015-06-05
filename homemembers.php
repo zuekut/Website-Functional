@@ -141,13 +141,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li>
+						<li class="active">
 							<a href="homemembers.php">Home</a>
 						</li>
 						<li>
 							<a href="homemembers.php#buytickets">BUY Tickets</a>
 						</li>
-                        <li class="active">
+                        <li>
                             <a href="lineupmembers.php">Line-Up</a>
 						</li>
                         <li>
@@ -303,7 +303,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								The two-day experience will allow you to visit the festival on 2 <em>consecutive</em> days (Saturday to Sunday). You can also purchase an area at the camping. <br><a href="#ticket_moreinfo" data-toggle="modal"><b>More Info</b></a>
 							</p>
                             <div class="home_ticketform">
-                                <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form-inline">
+                                <form role="form" action="buytickets.php" method="post" class="form-inline">
                                     <div class="form-clear"></div>
  <!--                               <div class="form-group" style="width: 70%;">
                                     <label for="form_amount2">Amount of tickets (max 6):</label>
@@ -347,7 +347,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 								This three day experience will allow you to see all artists and enjoy the whole festival (Friday-Saturday-Sunday.) You can also add camping for just €40 per night! <br><a href="#ticket_moreinfo" data-toggle="modal"><b>More Info</b></a>
 							</p>
                             <div class="home_ticketform">       
-                                <form role="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class="form-inline">
+                                <form role="form" action="buytickets.php" method="post" class="form-inline">
                                     <div class="form-clear"></div>
  <!--                               <div class="form-group" style="width: 100%;">
                                    <label for="form_amount2">Amount of tickets (max 6):</label>
@@ -462,32 +462,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	</span>
 </div>
     <!--Login Modal-->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="loginModalLabel">Login</h4>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="username-login" class="control-label">Username:</label>
-            <input type="text" class="form-control" id="username">
-          </div>
-          <div class="form-group">
-            <label for="password-login" class="control-label">Password:</label>
-            <input type="text" class="form-control" id="password-login">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Login</button>
-      </div>
-    </div>
-  </div>
-</div> 
 </body>
     
    

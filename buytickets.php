@@ -65,10 +65,10 @@
 						<li>
 							<a href="homemembers.php">Home</a>
 						</li>
-						<li>
+						<li class="active">
 							<a href="homemembers.php#buytickets">BUY Tickets</a>
 						</li>
-                        <li class="active">
+                        <li>
                             <a href="lineupmembers.php">Line-Up</a>
 						</li>
                         <li>
