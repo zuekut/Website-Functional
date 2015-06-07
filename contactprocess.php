@@ -58,7 +58,7 @@ if(isset($_POST['Email_Address'])) {
 	$email_message .= "<p>Telephone_Number: ".clean_string($telephonenumber)."</p>\r\n";
 	$email_message .= "Message: ".clean_string($comments)."\r\n";
       // $m -> From = 'no-reply@fontys.nl';
-       $m->setFrom($email_from, 'Maniak');
+       $m->setFrom($email_from, $full_name);
         $m -> FromName = $full_name;
         $m ->addReplyTo($email_from,$full_name);
         $m ->addAddress('rj.festival.2015@gmail.com', 'RJ');

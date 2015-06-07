@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -102,8 +101,8 @@
 	</div>
     
     
-    <div class="alert alert-success" role="alert" style="font-size: 20px;">
-  We have received your message successfuly! We'll be in touch with you soon!
+    <div class="alert alert-warning" role="alert" style="font-size: 20px;">
+        You have already purchased a ticket with this e-mail! If you want to buy a ticket for someone else,<a href="buytickets.php">click here</a> !
 </div>
     
 	<div class="row clearfix" id="divprops">

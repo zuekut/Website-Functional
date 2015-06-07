@@ -112,10 +112,10 @@
             </h1>
         </div>
         <div class="col-md-12 column">
-            <p style="font-size: 15px;">Now that you are logged in, you can buy your ticket. Please enter all details below:</p><br>
+            <div class="alert alert-warning" role="alert">The provided email is invalid, please try again</div>
         </div>
         
-        <form method="post" action="ticketdetailssession.php" class="form-horizontal">
+        <form method="post" action="buyticketsprocess.php" class="form-horizontal">
                     <div class="form-group">
                         <div class="col-sm-12">
                             <label class="col-sm-2 control-label" for="InputTicketType">Choose Ticket: </label>
@@ -131,13 +131,13 @@
                     <div class="form-group">
                         <div class="col-sm-12">
                             <label class="col-sm-2 control-label" for="InputLastName">Last Name:</label>
-                            <input name="Last_Name" class="form-control" style="width:20%;" type="text" placeholder="Pishtova">
+                            <input name="Last_Name" class="form-control" style="width:20%;" type="text" placeholder="Smith">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-12">
                             <label class="col-sm-2 control-label" for="InputFirstName">First Name:</label>
-                            <input name="First_Name" class="form-control" style="width:20%;" type="text" placeholder="Mitio">
+                            <input name="First_Name" class="form-control" style="width:20%;" type="text" placeholder="John">
                         </div>
                     </div>
                     <div class="form-group">
@@ -165,7 +165,6 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            
                             <button type="submit" class="btn btn-default">Proceed to Payment</button>
                         </div>
                     </div>

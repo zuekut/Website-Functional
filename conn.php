@@ -13,6 +13,7 @@ $pdo = new PDO("mysql:host=" . MYSQL_HOST . ";dbname=" . MYSQL_DATABASE,
     MYSQL_USER,
     MYSQL_PASSWORD
     );
-
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 
 ?>

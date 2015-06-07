@@ -16,11 +16,10 @@ if(isset($_POST['register'])){
     $sex = null;
     $camping = null;
     $ticketid = null;
-    $orderno = null;
     $ticketcode = null;
     $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
     $pass = !empty($_POST['password']) ? trim($_POST['password']) : null;
-    $email = !empty($_POST['email']) ? trim($_POST['email']) : null;
+    $email = !empty($_POST['Email']) ? trim($_POST['Email']) : null;
     //check if the supplied username already exists.
     $sql = "SELECT COUNT(username) AS num FROM customer_festival WHERE username = :username";
     $stmt = $pdo->prepare($sql);
@@ -35,8 +34,8 @@ if(isset($_POST['register'])){
     }
     else{
         $passwordHash = password_hash($pass, PASSWORD_BCRYPT, array("cost" => 12));
-    $sql = "INSERT INTO customer_festival (RFID, Name, BirthDate, Sex, Balance_Total, DateCreated, Entered, Camping, TicketID, OrderNo, TicketCode, username, password,email)"
-            . " VALUES (:RFID, :Name, :BirthDate, :Sex,:Balance_Total, :DateCreated, :Entered, :Camping, :TicketID, :OrderNo, :TicketCode, :username, :password, :email)";
+    $sql = "INSERT INTO customer_festival (RFID, Name, BirthDate, Sex, Balance_Total, DateCreated, Entered, Camping, TicketID, TicketCode, username, password,email)"
+            . " VALUES (:RFID, :Name, :BirthDate, :Sex,:Balance_Total, :DateCreated, :Entered, :Camping, :TicketID, :TicketCode, :username, :password, :email)";
     $stmt = $pdo->prepare($sql);
         $stmt->bindValue(':RFID', $rfid);
     $stmt->bindValue(':Name', $name);
@@ -47,7 +46,6 @@ if(isset($_POST['register'])){
             $stmt->bindValue(':Entered', $entered);
     $stmt->bindValue(':Camping', $camping);
     $stmt->bindValue(':TicketID', $ticketid);
-        $stmt->bindValue(':OrderNo', $orderno);
     $stmt->bindValue(':TicketCode', $ticketcode);
     $stmt->bindValue(':username', $username);
     $stmt->bindValue(':password', $passwordHash);
